@@ -264,7 +264,7 @@ DEPENDS =
 #
 # Set this to "true" if 'pdflatex' is needed to be used, "false" for using just 'latex'
 #
-USE_PDFLATEX = false
+USE_PDFLATEX = true
 
 #
 # This is what gets unconditionally deleted by any 'make clean' command
