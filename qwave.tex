@@ -11,7 +11,7 @@
 \usepackage{color}
 \usepackage{bm}
 \usepackage{slashed}
-%\usepackage{showlabels}
+\usepackage{showlabels}
 
 
 
@@ -298,28 +298,31 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \section{Introduction}
 \setcounter{equation}{0}
 
-	The list of literature on using quaternions in physics is so vast that it is hardly
-	possible to be overseen \cite{}.
-	The majority of the literature touches base on the use of quaterions for three-dimensional
-	rotation and Lorentz transformations.
+	The list of literature on the r\^ole of quaternions in physics is so vast that it is hardly
+	possible to be oversee it \cite{}.
+	The majority of the literature touches base on the use of quaterions in three-dimensional
+	rotations and Lorentz transformations.
 	Other papers include their applications in Electrodynamics and Quantum Mechanics.
-	The attractive feature of quaternions is that whenever a solution is possible in quaternionic form,
-	it is much more compact than that in customary form of Lorentz vectors and tensors. 
+	The attractive feature of quaternions is that whenever a solution is possible in the quaternionic form,
+	it is much more compact than that in the customary form of Lorentz vectors and tensors. 
 
 	For the majority of theorists, however, quaternions are seen as a somewhat exotic subject matter,
 	which neither has proven to be exceedingly effective to be adopted permanently, nor has lead
 	to any new phenomena or even a new formalism.
 
-	The other drawback, as it is perceived, is a somewhat ``strange'' language, and often strange results
-	following from this language.
+	The other drawback, as it is perceived, is a somewhat ``strange'' mathematical language,
+        often accompanied by strange results following from this language.
 	While from learning Quantum Mechanics and Gauge Theories we are used to non-commutative operators,
-	and non-commutative objects in general, when we see an operator of multiplication ``from the right'',
-	it immediately induces a certain degree of skepsis.
+	and non-commutative objects in general, when we see an operator of multiplication ``from the right'' $ |\, \ii $
+        (an example of the so-called ``barred'' operators) it immediately induces a certain degree of skepsis.
 	That is, mathematically this formalism may be interesting, but physically this seems to be
-	driven away from reality.
-	Furthermore, some treatments on quaternions in Quantum Mechanics predict some extra degrees of freedom for fermions,
+	driven away from reality and therefore unnecessary.
+	Furthermore, some treatments on quaternions in Quantum Mechanics predict extra degrees of freedom for fermions,
 	which we obviously do not observe.
-	This is the result of the fact that quaternions are multi-component numbers, a bit too many for Quantum Mechanics.
+	This is the result of the fact that quaternions are multi-component numbers,
+        with a bit too many components than needed for Quantum Mechanics.
+        These aspects of using quaternions in theoretical physics are enough to discourage the interest in the
+        majority of theorists.
 
 	Our goal is to cast a bridge from the regular algebraic language of physics (which is, dominantly based
 	on complex numbers) to the language of quaternions.
@@ -334,7 +337,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	With some exceptions, it would be very awkward to split the Schr\"odinger equation into its real and imanginary parts,
 	and then to attempt to solve the resulting equations.
 	Quantum mechanical operators of momentum, angular momentum are \emph{inherently} complex.
-	That is, to say, that the wavefunction is complex.
+	That is, to say, that the wavefunction is complex too.
 	
 	But as soon as relativistic effects are included into Quantum Mechanics, it turns out that particles
 	have \emph{spin}.
@@ -342,7 +345,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	to turn it into a spinor.
 	The spin operator itself is then given by the Pauli matrices.
 	This is where quaternions get involved.
-	The algebra of Pauli matrices is the same as that of quaternionic units.
+	The algebra of Pauli matrices is the same as that of quaternionic units, loosely speaking.
 	We argue that there is \emph{no inherent need} to having introduced matrices.
 	Quaternionic units are all that one needs, and implicitly the wavefunction in Quantum Mechanics is quaternionic.
 	A peculiar property of physics is that physical objects are actually described by \emph{complex} quaternions,
@@ -351,11 +354,11 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 
 	So, how does one include spin into the wavefunction by means of quaternions?
 	In the literature, quaternionic wavefunction is usually introduced \emph{ad hoc},
-	and the resulting Dirac or Schr\"odinger equation then includes non-physical degrees of freedom.
-	We proceed in a very conservative way:
+	and the resulting Dirac or Schr\"odinger equation then includes non-physical (unobserved) degrees of freedom.
+	We proceed in a very conservative way, essentially expanding on the development originally presented in [{\it thesis}]:
 	we start out from the Dirac Lagrangian, carefully taking into account the spin degrees of freedom,
 	and then \emph{derive} the Schr\"odinger equation.
-	Quaternionic derivations, while a bit unusual for some, are simpler.
+	Quaternionic derivations, while a bit unusual for some, are simpler than spinor derivations.
 	This way we argue that quaternionic language is natural for Quantum Mechanics.
 
 	It is not just for these reasons that we believe quaternions play a fundamental r\^ole in physics.
@@ -368,7 +371,9 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \vskip 0.6cm
 
 	Let us talk about our notations first, while gradually introducing the subject matter.
-	We overview the known facts which are easy to pick up and use, while their proof can be found in the literature.
+	The reader eager to see the physical results may choose to skip to the next section, occasinally returning here
+	to clarify the notations, when necessary.
+	Here we overview the known facts which are easy to pick up and use, while their proof can be found in the literature.
 	We denote the quaternionic units as
 \begin{equation}
 	\ii^2	~~=~~	\jj^2	~~=~~	\kk^2	~~=~~	-1\,,
@@ -396,7 +401,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	Here $ i $ denotes a regular imaginary complex unit, which commutes with $ \ii $, $ \jj $, $ \kk $.
 
 	We right away introduce the conjugation operations.
-	We denote the quaternionic conjugtion by $ \wt a $,
+	We denote the quaternionic conjugation by $ \wt a $,
 \begin{equation}
 	\wt a	~~=~~	a^0  ~~-~~  a^1 \ii  ~~-~~  a^2 \jj  ~~-~~ a^3 \kk\,.
 \end{equation}
@@ -438,7 +443,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	Together, the two objects \eqref{true-vector} and \eqref{pseudo-vector} span the entire space of 
 	complex quaternions \eqref{cq}.
 	In other words, a generic complex quaternion $ a $ can be split into two four-vectors.
-	Their time components will represent a true and a pseudo-scalar, while their three-dimensional
+	Their time components will represent a true- and a pseudo-scalar, while their three-dimensional
 	parts will represent a true and an axial vector, correspondingly.
 	Notice, how multiplication by the complex $ i $ turns a true vector into an axial vector, and
 	the same for scalars.
@@ -462,11 +467,48 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	is a contravariant vector.
 
 	To make these identifications more meaningful, let us talk about Lorentz transformations.
-	\emph{So let's talk about them}
+	Lorentz transformations are generated by a purely-imaginary quaterionic parameter
+\begin{equation}
+	\Lambda		~~=~~	\vec\kappa  ~~+~~  i\,\vec\lambda\,.
+\end{equation}
+	We are not going to explicitly treat it as a vector, so we are not putting a vector sign on this parameter.
+	Parameter $ \vec\kappa $ generates three-dimensional rotations, while parameter $ \lambda $
+	generates boosts.
+	These are ``generators'' in the sense that the actual finite transformations are performed by the exponent
+\begin{equation}
+	e^\Lambda\,.
+\end{equation}
+	It is important to be careful here, as $ \vec\kappa $ can be interpreted as a three-dimensional rotation
+	only when $ \vec\lambda ~=~ 0 $, and the same for $ \vec\lambda $ --- it can be interpreted as a boost
+	only when $ \vec\kappa ~=~ 0 $.
+	This is because in general $ \vec\kappa $ and $ \vec\lambda $ do not commute, and therefore
+\begin{equation}
+	e^{\vec\kappa ~+~ i\,\vec\lambda}	~~\neq~~	e^{\vec\kappa}  ~\cdot~  e^{i\,\vec\lambda}\,.
+\end{equation}
+	Notice that since $ \Lambda $ is purely imaginary, $ \wt\Lambda ~=~ -\Lambda $, and therefore
+\begin{equation}
+	\wt{(e^\Lambda)}		~~=~~	e^{-\Lambda}\,.
+\end{equation}
+	A contravariant vector $ v $ transforms under $ \Lambda $ as
+\begin{equation}
+\label{contra}
+	v	~~\to~~		e^\Lambda\,v\,e^{\Lambda^\dag}\,.
+\end{equation}
+	Any covariant vector then should transform the same way that $ v^* $ does:
+\begin{equation}
+\label{co}
+	v^*	~~\to~~		e^{\Lambda^*}\,v^*\,e^{\wt\Lambda}\,.
+\end{equation}
+	As a special case of these, a three-dimensional vector $ \vec v $ rotates as
+\begin{equation}
+\label{rotation}
+	\vec v	~~\to~~		e^{\vec\kappa}\,\vec v\,e^{-\vec\kappa}\,.
+\end{equation}
+	This concludes the basic discussion of vectors for now.
 
-	Another way a complex quaternion \eqref{cq} can be split up, is by separating its zeroth component $ a^0 $
+	Another way a complex quaternion \eqref{cq} can be split up, is by separating its zeroth component $ a^0 ~\equiv~ \phi $
 	and its vector part $ \vec a $.
-	The zeroth component $ a^0 $ is identified as a complex scalar field.
+	The zeroth component $ \phi $ is identified as a complex scalar field.
 	The remaining vector part is then identified as a fieldstrength:
 \begin{equation}
 \label{fs}
@@ -474,10 +516,95 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \end{equation}
 	Notice that this agrees with the identifications of \eqref{true-vector} and \eqref{pseudo-vector}
 	as polar and axial vectors.
-	While both $ \vec B $ and $ \vec E $ are vectors in the three-dimensional sence,
-	one does not view the object \eqref{fs} as a four-dimensional vector in any sence.
+	While both $ \vec B $ and $ \vec E $ are vectors in the three-dimensional sense,
+	one does not view the object \eqref{fs} as a four-dimensional vector in any way.
 	This is an entirely different split up of a complex quaternion.
 
+	Both $ \phi $ and $ \vec F $ transform the same way under Lorentz transformations:
+\begin{equation}
+	p	~~\to~~	e^\Lambda\,p\,e^{\wt\Lambda}\,.
+\end{equation}
+	For the scalar $ \phi $ this obviously does not do anything, since it is just a complex number:
+\[
+	e^\Lambda\,\phi\,e^{\wt\Lambda}	~~=~~	\phi\, e^\Lambda\, e^{\wt\Lambda}	~~=~~	\phi\,,
+\]
+	so it is indeed a scalar.
+	While for the fieldstrength, this dictates that
+\begin{equation}
+	\vec F		~~\to~~		e^\Lambda\,\vec F\,e^{\wt\Lambda}\,.
+\end{equation}
+	Note that for the case of pure rotations, when $ \Lambda ~=~ \vec\kappa $,
+	this agrees with Eq.~\eqref{rotation}, as $ \wt\Lambda ~=~ -\Lambda ~=~ -\vec\kappa $.
+	That is, both the electric and magnetic fields rotate as three-vectors.
+
+	Finally, we introduce spinors.
+	Here we give a very brief overview of spinors necessary for Section~\ref{section-dirac}, while
+	a more detailed discussion is postponed until Section~\ref{section-spinors}.
+	We begin with stating that the space of complex quaternions can be split in two halves in a yet another way,
+	namely using chirality projectors, $ P_L $ and $ P_R $.
+	A \emph{left-handed} spinor is defined as an arbitrary complex quaternion multiplied by 
+	a projector $ P_L $ on the right:
+\begin{equation}
+	\psi_L	~~=~~	a\,P_L\,.
+\end{equation}
+	Here $ P_L $ is
+\begin{equation}
+	P_L	~~=~~	\frac{1 \,+\, i\kk} 2\,,
+\end{equation}
+	and we call it a projector because
+\[
+	P_L^2	~~=~~	P_L\,.
+\]
+	All accompanying details of these definitions can be found in Section~\ref{section-spinors}.
+	For an ordinary reader $ \psi_L $ should be precisely viewed as a left-handed
+	chiral spinor.
+	A convenient basis for $ \psi_L $ is formed by elements $ P_L $ and $ \jj\,P_L $,
+	which are geometrically orthogonal to each other:
+\begin{equation}
+	\psi_L	~~=~~	\xi_L\,P_L  ~~+~~  \chi_L\,\jj\,P_L\,.
+\end{equation}
+	Complex numbers $ \xi_L $ and $ \chi_L $ are precisely the ``spin-up'' and ``spin-down''
+	components of $ \psi_L $ viewed as a Weyl spinor:
+\begin{equation}
+	\psi_L	~~=~~	\left\lgroup
+				\begin{matrix}
+					\xi_L \\
+					\chi_L
+                		\end{matrix}
+			\right\rgroup.
+\end{equation}
+
+	Left-handed spinors span a half of the complex quaternion space, while the other half
+	is spanned by the right-handed spinors:
+\begin{equation}
+	\psi_R	~~=~~	a\,P_R\,,
+\end{equation}
+	where
+\begin{equation}
+	P_R	~~=~~	\frac{1 \,-\, i\kk} 2\,.
+\end{equation}
+	These two halves are related by complex conjugation $ * $,
+	and the projectors are related as
+\begin{align}
+	P_R	& ~~=~~	P_L^*\,,
+	&
+	P_L  ~~+~~  P_R	& ~~=~~ 1\,.
+\end{align}
+	The basis for $ \psi_R $ is similarly given by $ P_R $ and $ \jj\,P_R $, but the
+	components are identified slightly differently
+\begin{equation}
+	\psi_R	~~=~~	-\xi_R\,\jj\,P_R  ~~+~~  \chi_R\,P_R\,.
+\end{equation}
+	Defined like so,
+\begin{equation}
+	\psi_R	~~=~~	\left\lgroup
+				\begin{matrix}
+					\xi_R \\
+					\chi_R
+                		\end{matrix}
+			\right\rgroup
+\end{equation}
+	is precisely identified as a right-handed Weyl spinor.
 
 
 \begin{itemize}
@@ -505,6 +632,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 %                                                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dirac equation}
+\label{section-dirac}
 \setcounter{equation}{0}
 
 
@@ -535,6 +663,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 %                                                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Spinors}
+\label{section-spinors}
 
 
 
