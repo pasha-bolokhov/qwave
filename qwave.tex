@@ -472,7 +472,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	\Lambda		~~=~~	\vec\kappa  ~~+~~  i\,\vec\lambda\,.
 \end{equation}
 	We are not going to explicitly treat it as a vector, so we are not putting a vector sign on this parameter.
-	Parameter $ \vec\kappa $ generates three-dimensional rotations, while parameter $ \lambda $
+	Parameter $ \vec\kappa $ generates three-dimensional rotations, while parameter $ \vec\lambda $
 	generates boosts.
 	These are ``generators'' in the sense that the actual finite transformations are performed by the exponent
 \begin{equation}
@@ -547,7 +547,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \begin{equation}
 	\psi_L	~~=~~	a\,P_L\,.
 \end{equation}
-	Here $ P_L $ is
+	Here $ P_L $ is a complex quaternion
 \begin{equation}
 	P_L	~~=~~	\frac{1 \,+\, i\kk} 2\,,
 \end{equation}
@@ -561,6 +561,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	A convenient basis for $ \psi_L $ is formed by elements $ P_L $ and $ \jj\,P_L $,
 	which are geometrically orthogonal to each other:
 \begin{equation}
+\label{lbasis}
 	\psi_L	~~=~~	\xi_L\,P_L  ~~+~~  \chi_L\,\jj\,P_L\,.
 \end{equation}
 	Complex numbers $ \xi_L $ and $ \chi_L $ are precisely the ``spin-up'' and ``spin-down''
@@ -593,6 +594,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	The basis for $ \psi_R $ is similarly given by $ P_R $ and $ \jj\,P_R $, but the
 	components are identified slightly differently
 \begin{equation}
+\label{rbasis}
 	\psi_R	~~=~~	-\xi_R\,\jj\,P_R  ~~+~~  \chi_R\,P_R\,.
 \end{equation}
 	Defined like so,
@@ -605,21 +607,36 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 			\right\rgroup
 \end{equation}
 	is precisely identified as a right-handed Weyl spinor.
+	The basis \eqref{lbasis} and especially so \eqref{rbasis} may seem a bit awkward,
+	but they are convenient for doing algebra.
+	The fact that the projectors are part of the bases allows us to perform
+	various manipulations and conjugations on spinors quite effectively.
 
-
-\begin{itemize}
-
-\item Notations
-
-\item Vectors and pseudo-vectors
-
-\item Scalars and field strength
-
-\item Spinors
-
-\item Standard Model as the ultimate goal
-
-\end{itemize}
+	Under Lorentz transformations, left spinors by definition transform as
+\begin{equation}
+	\psi_L	~~\to~~		e^\Lambda\, \psi_L\,,
+\end{equation}
+	while the right-handed ones transform in the conjugate representation
+\begin{equation}
+	\psi_R	~~\to~~		e^{\Lambda^*}\, \psi_R\,.
+\end{equation}
+	It is interesting to observe and compare how spinors and three-dimensional vectors
+	transform under three dimensional rotaions.
+	Consider a rotation around axis $ \hat a $ ($ \hat a{}^2 ~=~ -1 $) through angle $ \alpha $.
+	Vector $ \vec v $ rotates as
+\begin{equation}
+	\vec v	~~\to~~		e^{\alpha\, \hat a/2}\, \vec v\, e^{-\alpha\, \hat a/2}\,,
+\end{equation}
+	while spinors transform as
+\begin{equation}
+	\psi_{L,R}	~~\to~~	e^{\alpha\, \hat a/2}\, \psi_{L,R}\,.
+\end{equation}
+	In particular, if we perform a rotation through $ 2\pi $, then
+	$ e^{\pm 2\pi\,\hat a/2} ~=~ -1 $, and a vector is unchanged,
+	while a spinor changes its sign, as it should be.
+	Of course, this is because of the factor of $ 1/2 $ in the exponent (the famous ``Rodrigues' two''), which
+	is just the reflection of the fact that SU(2) is a double cover of
+	the rotation group SO(3).
 
 
 
