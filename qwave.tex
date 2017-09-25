@@ -483,8 +483,10 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	only when $ \vec\kappa ~=~ 0 $.
 	This is because in general $ \vec\kappa $ and $ \vec\lambda $ do not commute, and therefore
 \begin{equation}
-	e^{\vec\kappa ~+~ i\,\vec\lambda}	~~\neq~~	e^{\vec\kappa}  ~\cdot~  e^{i\,\vec\lambda}\,.
+	e^{\vec\kappa ~+~ i\,\vec\lambda}	~~\neq~~	e^{\vec\kappa}  ~\cdot~  e^{i\,\vec\lambda}\,,
 \end{equation}
+	where each individual exponent on the right-hand side {\emph is} treated as a rotation and a boost,
+	correspondingly.
 	Notice that since $ \Lambda $ is purely imaginary, $ \wt\Lambda ~=~ -\Lambda $, and therefore
 \begin{equation}
 	\wt{(e^\Lambda)}		~~=~~	e^{-\Lambda}\,.
@@ -652,11 +654,73 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \label{section-dirac}
 \setcounter{equation}{0}
 
+	Our goal in this section is to construct the Lagrangian for the electron in electromagnetic field,
+	in quaternionic form, and derive the equation of motion --- the Dirac equation.
 
+	Let us begin with a massless particle, in the absence of the electromagnetic field.
+	The appropriate Lagrangian was given in [{\it thesis}],
+\begin{equation}
+\label{L-massless}
+	\mc L_\text{massless}
+		~~=~~	\psi_L^\dag\, i\partial\, \psi_L  ~~+~~  \psi_R^\dag\, i\,\partial^*\, \psi_R
+			~~+~~  \text{c.c.}
+\end{equation}
+	Note that Lorentz invariance is manifest here, because
+\begin{align}
+	\psi_L^\dag	& ~~\to~~	\psi_L^\dag\, e^{\Lambda^\dag}  ~~=~~  \psi_L^\dag\, e^{-\Lambda^*}\,,
+	&
+	\partial	& ~~\to~~	e^{\Lambda^*}\, \partial\, e^{-\Lambda}\,,
+	&
+	\psi_L		& ~~\to~~	e^\Lambda\, \psi_L\,,
+\end{align}
+	and
+\begin{align}
+	\psi_R^\dag	& ~~\to~~	\psi_R^\dag\, e^{\wt \Lambda}  ~~=~~  \psi_R^\dag\, e^{-\Lambda}\,,
+	&
+	\partial^*	& ~~\to~~	e^\Lambda\, \partial^*\, e^{-\Lambda^*}\,,
+	&
+	\psi_R		& ~~\to~~	e^{\Lambda^*}\, \psi_R\,.
+\end{align}
+{\boldmath\bf
+	Although both $ \psi_L $ and $ \psi_R $ are parts of a single Dirac spinor
+\begin{equation}
+	\psi_D		~~=~~	\psi_L  ~~+~~  \psi_R\,,
+\end{equation}
+	it does not seem to be possible to combine the two terms in Eq.~\eqref{L-massless}
+	into a single term just using $ \psi_D $,
+	because of the different representations of the derivative $ \partial $
+	---
+	should think about this.
+}
+
+	We need to make an important remark about conjugating products of spinors,
+	due to the fact that spinors are Grasmann variables.
+	By definition, complex conjugation of two Grassman variable interchanges their order,
+\begin{equation}
+	(\zeta\, \eta)^*	~~=~~	\eta^*\, \zeta^*\,,\qquad\qquad \text{for Grassmann numbers.}
+\end{equation}
+	If we take two complex quaternions $ \xi $ and $ \chi $, which are fermions at the same time,
+	complex conjugation cannot change their order, because of their quaternionic content.
+	In that case, the order is preserved, but an extra minus sign appears,
+\begin{equation}
+	(\xi\, \chi)^*		~~=~~	-\, \xi^*\, \chi^*\,,\qquad \text{for fermionic complex quaternions.}
+\end{equation}
+	If we take a quaternionic conjugate $ \wt{\xi\, \chi} $, on the other hand, 
+	the conjugation will attempt to change their order precisely because of the quaternionic content.
+	But now because the spinors are fermions, and we are \emph{not} performing a
+	complex conjugation, we get an extra minus sign
+\begin{equation}
+	\wt{\xi\, \chi}		~~=~~	-\, \wt\chi\, \wt\xi\,\qquad \text{for quaternionic spinors.}
+\end{equation}
+	The only kind of conjugation which does not produce a negative sign is hermitean
+	conjugation --- this combination changes the order of the spinors in agreement with
+	both complex and quaternionic conjugations,
+\begin{equation}
+	(\xi\, \chi)^\dag	~~=~~	\chi^\dag\, \xi^\dag\,.
+\end{equation}
+
+	
 \begin{itemize}
-\item Weyl spinors
-
-\item Lorentz transformations
 
 \item Gauge transformations
 
@@ -667,6 +731,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \item Dirac equation
 
 \item Non-relativistic limit
+
 \end{itemize}
 
 
