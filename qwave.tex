@@ -358,6 +358,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	We proceed in a very conservative way, essentially expanding on the development originally presented in [{\it thesis}]:
 	we start out from the Dirac Lagrangian, carefully taking into account the spin degrees of freedom,
 	and then \emph{derive} the Schr\"odinger equation.
+	Spin naturally appears as a consequence of the fact that the wavefunction is quaternionic.
 	Quaternionic derivations, while a bit unusual for some, are simpler than spinor derivations.
 	This way we argue that quaternionic language is natural for Quantum Mechanics.
 
@@ -753,14 +754,14 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \begin{align}
 %
 \notag
-	\psi_L^*		& ~~\to~~		e^{-i\varphi}\,\psi_L^*\,,
+	\psi_L^*		& ~~\to~~		\psi_L^*\,e^{-i\varphi}\,,
 	&
-	\psi_R^*		& ~~\to~~		e^{-i\varphi}\,\psi_R^*\,,
+	\psi_R^*		& ~~\to~~		\psi_R^*\,e^{-i\varphi}\,,
 	\\[4mm]
 %
-	\psi_L^\dag		& ~~\to~~		e^{-i\varphi}\,\psi_L^\dag\,,
+	\psi_L^\dag		& ~~\to~~		\psi_L^\dag\,e^{-i\varphi}\,,
 	&
-	\psi_R^\dag		& ~~\to~~		e^{-i\varphi}\,\psi_R^\dag\,.
+	\psi_R^\dag		& ~~\to~~		\psi_R^\dag\,e^{-i\varphi}\,.
 \end{align}
 
 	In order to make this transformation local, we define the long derivative,
@@ -823,7 +824,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	m\, \psi_L^\dag\, \psi_R\, \jj  ~~+~~  \text{q.c.}  ~~+~~  \text{c.c.}
 \end{equation}
 	This follows from the general cyclic property of quaternion product
-	under the $ \text{q.c.} $ sign, analogous to the cyclicity of trace of matrices\footnote{
+	under the ``$ \text{q.c.} $'' sign, analogous to the cyclicity of trace of matrices\footnote{
 		In fact, if one chooses to represent quaternions via Pauli matrices, the real
 		part of a quaternion exactly corresponds to the trace of its matrix representation.
 	} ---
@@ -902,9 +903,9 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	\ml_\text{Dirac}		~~\supset~~
 			\lgr m\, \psi_R^\dag\, \psi_L\, \jj  ~~+~~  \text{q.c.} \rgr  ~~+~~  \text{c.c.}
 \end{equation}
-	We did not make anything up here, as the first term
+	We did not make anything up here, as the first term here
 	was just hidden inside the ``$ \text{q.c.} $'' and ``$ \text{c.c.} $'' in Eq.~\eqref{L-massive}.
-	The noticeable difference is that this term enters with a \emph{positive} sign.
+	Notice that this term enters with a \emph{positive} sign.
 
 	Now we can vary the Langrangian with respect to $ \psi_R^\dag $, finding
 \begin{equation}
