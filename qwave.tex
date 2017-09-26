@@ -366,9 +366,21 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	We view this work as one of the steps towards the description of the Standard Model in
 	such a language.
 
+\begin{itemize}
+
+\item	\emph{Getting rid of matrices}
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vskip 0.8cm
 \centerline{*\qquad\qquad\qquad*\qquad\qquad\qquad*}
 \vskip 0.6cm
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 	Let us talk about our notations first, while gradually introducing the subject matter.
 	The reader eager to see the physical results may choose to skip to the next section, occasinally returning here
@@ -735,7 +747,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	&
 	\wt\psi{}_R		& ~~\to~~		\wt\psi{}_R\,e^{i\varphi}\,.
 \end{align}
-	Although certainly $ e^{i\varphi} $ commutes with $ \wt\psi{}_{L,R} $,
+	Although $ e^{i\varphi} $ certainly commutes with $ \wt\psi{}_{L,R} $,
 	for convenience we wrote it on the right of the latter.
 	Both the complex conjugates and hermitean conjugates will have the opposite charge,
 \begin{align}
@@ -755,7 +767,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \begin{equation}
 	\md		~~=~~	\partial  ~~-~~  i\,A^*\,.
 \end{equation}
-	The fact that we have to put $ A^* $ here instead of just $ A $ is because
+	The reason that we have to put $ A^* $ here instead of just $ A $ is because
 	$ \partial $ and $ \md $ are covariant vectors.
 	This is just the reflection of the fact that $ A^\mu $ enters the long derivative
 	with the lower index $ \mu $:
@@ -787,9 +799,130 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 		~~=~~	\psi_L^\dag\, i\md\, \psi_L  ~~+~~  \psi_R^\dag\, i\,\wt\md\, \psi_R
 			~~+~~  \text{c.c.}
 \end{equation}
+	Before proceeding, let us emphasize the remarkable feature of the Lagrangians \eqref{L-massless} and \eqref{L-gauge},
+	which we could have done earlier: the absence of $ \gamma $-matrices (or $ \sigma $-matrices for that matter).
+	The only residue of the matrix structure of the Dirac's Lagrangian is residing in the fact that the Lagragians
+	have two chiral terms, instead of just one.
+	We will return to this below.
+
+	Now we add the mass term.
+	Since this has to be the Dirac mass, it has to flip chirality.
+	The only form that correctly reproduces the mass term is $ m\, \jj\, \psi_L^\dag\, \psi_R $,
+\begin{equation}
+	m\, \jj\, \psi_L^\dag\, \psi_R  ~~+~~  \text{q.c.}  ~~+~~  \text{c.c}  ~~=~~
+	m \lgr \jj\, \psi_L^\dag\, \psi_R  ~+~  \wt\psi{}_R\, \psi_L^*\, \jj \rgr
+	~~+~~  \text{c.c.}
+\end{equation}
+	We will discuss the occurrence of $ \jj $ in this expression in detail in Section~\ref{section-spinors}.
+	Its appearance seems ugly, and we will be able to get rid of it soon, after we discover its meaning.
+	For now we just note that without it the expression would vanish, \emph{i.e.} $ \psi_L^\dag\, \psi_R $
+	has no real part.
+	Let us also note that this factor of $ \jj $ can be moved to the right at our conveniece:
+\begin{equation}
+\label{m-term}
+	m\, \psi_L^\dag\, \psi_R\, \jj  ~~+~~  \text{q.c.}  ~~+~~  \text{c.c.}
+\end{equation}
+	This follows from the general cyclic property of quaternion product
+	under the $ \text{q.c.} $ sign, analogous to the cyclicity of trace of matrices\footnote{
+		In fact, if one chooses to represent quaternions via Pauli matrices, the real
+		part of a quaternion exactly corresponds to the trace of its matrix representation.
+	} ---
+\begin{equation}
+	a\, b\, c  ~~+~~  \text{q.c.}	~~=~~	b\, c\, a  ~~+~~  \text{q.c.}
+\end{equation}
+	The proof is simple --- the real part of a product of \emph{two} quaternions cannot depend
+	on their order.
+	From this follows the cyclicity.
+	The fact that we are dealing with complexified quaternions cannot change this property.
+
+	As we will see in Section~\ref{section-spinors}, in the product $ \psi_R\, \jj $ the factor $ \jj $
+	``elevates'' the right-handed spinor $ \psi_R $ to the left-handed space
+	(we have used the term ``elevates'' because conventionally a left-handed spinor is
+	written above right-handed spinor inside the column of a Dirac spinor).
+	Importantly, the factor $ \jj $ does not change the spinor's representation (it is obviously still transformed
+	via multiplication by $ e^{\Lambda^*} $ on the left).
+	Instead, the spinor just becomes expandable in the left-handed basis \eqref{lbasis}.
+	We will use this when we define the \emph{standard} representation for spinors below.
+
+	Written in terms of the components, the mass term \eqref{m-term} gives
+\begin{equation}
+	\psi_L^\dag\, \psi_R\, \jj  ~~+~~  \text{q.c.}  ~~+~~  \text{c.c.}	~~=~~
+	\xi_L^*\,\xi_R  ~+~ \chi_L^*\,\chi_R  ~+~  \xi_R^*\,\xi_L  ~+~ \chi_R^*\,\chi_L\,,
+\end{equation}
+	as it should be for the Dirac mass term.
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                        D I R A C   L A G R A N G I A N                       %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Dirac Lagrangian}
+	Now we can derive the Dirac equation.
+	Our starting point is the full Lagrangian
+\begin{equation}
+\label{L-massive}
+	\ml_\text{Dirac}	~~=~~	
+			\psi_L^\dag\, i\md\, \psi_L  ~~+~~  \psi_R^\dag\, i\,\wt\md\, \psi_R
+			~~-~~  
+			\lgr m\, \psi_L^\dag\, \psi_R\, \jj  ~~+~~  \text{q.c.} \rgr  ~~+~~  \text{c.c.},
+\end{equation}
+	where we remember that the mass term has to actually enter with a negative sign,
+	and we consider the electromagnetic field to be fixed.
 
+	To derive the equations of motion, we vary the Lagrangian \eqref{L-massive} with respect to
+	$ \psi_L^\dag $ and $ \psi_R^\dag $.
+	The reader may wonder at this point -- how are we going to differentiate this Lagrangian with respect
+	to quaternions, let alone complexified and fermionic?
+	We postpone the formal answer to this question until Section~\ref{section-diff}.
+	For now, we can just act intuitively, at least when differentiating with respect to $ \psi_L^\dag $.
+	Indeed, in the terms where it is present in Eq.~\eqref{L-massive}, it is sitting on the left,
+	and so the left derivative gives
+\begin{equation}
+\label{ldirac}
+	i\,\md\,\psi_L  ~~-~~  m\, \psi_R\, \jj	~~=~~	0\,.
+\end{equation}
+	Loosely speaking, for quaternions $ \partial \wt q/\partial q ~\neq~ 0 $ --- unlike for complex numbers,
+	for which $ \partial \ov z / \partial z ~=~ 0 $.
+	So it seems like there should be more terms on the left-hand side of Eq.~\eqref{ldirac}.
+	Why we can act so naively, and why the other terms do not contribute is, again,
+	explained in Section~\ref{section-diff}.
+	Here we provide an alternative and a more transparent justification, as follows.
+	Let us for a moment pretend that we are dealing with a ``quaternionic'' Lagrangian
+\begin{equation}
+\label{L-quat}
+	\psi_L^\dag\, i\md\, \psi_L  ~~+~~  m\, \psi_L^\dag\, \psi_R\, \jj
+\end{equation}
+	of which we will only want its real part.
+	If we find the extremum of this Lagrangian, it will also extremize its real part.
+	But the extremum of \eqref{L-quat} is exactly given by Eq.~\eqref{ldirac}.
+
+	In order to vary with respect to $ \psi_R^\dag $, we just re-write the mass term as
+\begin{equation}
+	\ml_\text{Dirac}		~~\supset~~
+			\lgr m\, \psi_R^\dag\, \psi_L\, \jj  ~~+~~  \text{q.c.} \rgr  ~~+~~  \text{c.c.}
+\end{equation}
+	We did not make anything up here, as the first term
+	was just hidden inside the ``$ \text{q.c.} $'' and ``$ \text{c.c.} $'' in Eq.~\eqref{L-massive}.
+	The noticeable difference is that this term enters with a \emph{positive} sign.
+
+	Now we can vary the Langrangian with respect to $ \psi_R^\dag $, finding
+\begin{equation}
+\label{rdirac}
+	i\,\wt\md\,\psi_R  ~~+~~  m\, \psi_L\, \jj	~~=~~	0\,.
+\end{equation}
+	The two expressions \eqref{ldirac} and \eqref{rdirac} are the \emph{quaternionic Dirac equations}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                  N O N - R E L A T I V I S T I C   L I M I T                 %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Non-relativistic limit}
+
+
+\pagebreak
 \begin{itemize}
 
 \item Gauge transformations
@@ -830,6 +963,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 %                                                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Differentiation}
+\label{section-diff}
 
 
 
