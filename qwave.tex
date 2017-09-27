@@ -930,15 +930,190 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Non-relativistic limit}
 
+	Now let us derive the Schr\"odinger equation.
+	We do it in the classical way [{\it BLP}], by taking the large-mass limit.
+	First, we open up the long derivatives in Eqs.~\eqref{ldirac}, \eqref{rdirac},
+\begin{align}
+%
+\notag
+	&
+	i\,\p_0\,\psi_L  ~+~  A_0\,\psi_L  ~-~  (\vec\nabla ~+~ i\,\vec A)\,\psi_L
+	~-~  m\, \psi_R\, \jj	~~=~~	0\,,
+	\\[2mm]
+%
+\label{dirac-split}
+	&
+	i\,\p_0\,\psi_R  ~+~  A_0\,\psi_R  ~+~  (\vec\nabla ~+~ i\,\vec A)\,\psi_R
+	~+~  m\, \psi_L\, \jj  ~~=~~ 0\,.
+\end{align}
+
+	We can make one consistency check.
+	For a free particle, the time derivative gives the energy,
+	$ i\,\p_0 ~\to~ E $.
+	If at the same time, it has zero momentum, then $ E ~=~ m $, and
+	we find
+\begin{align}
+%
+\notag
+	&
+	m\,\psi_L  ~~-~~  m\,\psi_R\,\jj	~~=~~	0
+	&
+	\Longrightarrow\quad \psi_L	~~=~~	+\,\psi_R\,\jj\,,
+	\\[2mm]
+%
+\label{rest}
+	&
+	m\,\psi_R  ~~+~~  m\,\psi_L\,\jj	~~=~~	0
+	&
+	\Longrightarrow\quad \psi_R	~~=~~	-\,\psi_L\,\jj\,.
+\end{align}
+	The two equations are consistent.
+	What does the equality $ \psi_L ~=~ \psi_R\,\jj $ mean?
+	As we already mentioned, and as we shall see in Section~\ref{section-spinors},
+	multiplying by $ \jj $ on the right
+	\emph{rotates} the components of $ \psi_L $ and $ \psi_R $ into
+	each other.
+	That is, in Dirac spinor language, for a spinor
+\begin{equation}
+	\psi_\text{chiral}	~~=~~	\lgr 
+						\begin{matrix}
+							\psi_L^\alpha	\\[2mm]
+							\psi_{R\dot\alpha}
+						\end{matrix}
+					\rgr
+\end{equation}
+	this operation turns
+\begin{align}
+	&
+	\psi_L^\alpha	~~\to~~		-\psi_{R\dot\alpha}\,,
+	&
+	\psi_{R\dot\alpha}	~~\to~~		\psi_L^\alpha\,.
+\end{align}
+	Equation \eqref{rest} then simply implies that the two spinors
+	$ \psi_L^\alpha $ and $ \psi_{R\dot\alpha} $ are equal.
+	This is correct, as a particle at rest is described by a single
+	two-component spinor.
+
+	This is too crude a limit, we want to keep the right-handed and left-handed
+	spinors different to the order $ O(1/m) $, and momentum non-zero.
+	
+	To do that, we, essentially, switch to the standard representation.
+	Let us multiply the second equation in \eqref{dirac-split} by $ \jj $
+	on the right:
+\begin{align}
+%
+\notag
+	i\,\p_0\,\psi_L  ~+~  A_0\,\psi_L  ~-~  (\vec\nabla ~+~ i\,\vec A)\,\psi_L
+	~-~  m\, \psi_R\, \jj	& ~~=~~	0\,,
+	\\[2mm]
+%
+\label{dirac-j}
+	i\,\p_0\,\psi_R\,\jj  ~+~  A_0\,\psi_R\,\jj  ~+~  (\vec\nabla ~+~ i\,\vec A)\,\psi_R\,\jj
+	~-~  m\, \psi_L  & ~~=~~ 0\,.
+\end{align}
+	It is natural now to add and subtract these two equations, and introduce the notations
+\begin{align}
+	\psi_+		~~\equiv~~	\zeta	~~=~~	\frac{\psi_L \,+\, \psi_R \jj}{\sqrt{2}}\,,
+	&&
+	\psi_-		~~\equiv~~	\eta	~~=~~	\frac{\psi_L \,-\, \psi_R \jj}{\sqrt{2}}\,.
+\end{align}
+	As discussed in Section~\ref{section-spinors}, these are precisely the upper
+	and lower components of a Dirac spinor in the standard representation:
+\begin{equation}
+	\psi_\text{standard}	~~=~~	
+		\lgr 
+			\begin{matrix}
+				\zeta	\\[2mm]
+				\eta
+			\end{matrix}
+		\rgr.
+\end{equation}
+	In this section, we prefer to call them $ \psi_\pm $.
+	For a particle at rest, $ \psi_- ~=~ 0 $ as it should be.
+	Equations \eqref{dirac-j} now read
+\begin{align}
+%
+\notag
+	i\,\p_0\,\psi_+  ~+~  A_0\, \psi_+  ~-~  (\vec\nabla ~+~  i\,\vec A)\, \psi_-	& ~~=~~  \phantom{+}\,m\,\psi_+\,.
+	\\[2mm]
+\label{dirac-standard}
+	i\,\p_0\,\psi_-  ~+~  A_0\, \psi_-  ~-~  (\vec\nabla ~+~  i\,\vec A)\,\psi_+	& ~~=~~ -\,m\,\psi_-\,.
+\end{align}
+	We now get rid of the mass term in the first equation in \eqref{dirac-standard} via the redefinition
+\[
+	\psi_\pm	~~\to~~		e^{-i m t}\, \psi_\pm\,.
+\]
+	In the first equation in \eqref{dirac-standard}, the mass term is now gone:
+\begin{equation}
+	i\,\p_0\,\psi_+		~~=~~	(\vec\nabla ~+~ i\,\vec A)\,\psi_-  ~~-~~  A_0\, \psi_+\,,
+\end{equation}
+	while in the second term the mass term doubles.
+	Taking the large-mass limit we find
+\[
+	2m\,\psi_-	~~=~~	(\vec\nabla ~+~ i\,\vec A)\,\psi_+\,,
+\]
+	and so
+\begin{equation}
+	i\,\p_0\,\psi_+		~~=~~
+		\frac 1 {2m}\, (\vec\nabla ~+~ i\,\vec A)^2\, \psi_+  ~~-~~  A_0\, \psi_+\,.
+\end{equation}
+	The final step now is to transform the quaternionic square
+\[
+	(\vec\nabla ~+~ i\,\vec A)^2
+\]
+	into the usual vector operators --- scalar and vector products.
+	Denoting the scalar-product square of a vector by figure brackets $ \{~ \} $,
+	one finds
+\[
+	(\vec\nabla ~+~ i\,\vec A)^2	~~=~~	-\, \big\{\vec\nabla ~+~ i\,\vec A\big\}^2  ~~+~~  i\,\vec B\,,
+\]
+	in operator form.
+	We thus get
+\begin{equation}
+\label{schrod}
+	i\,\p_0\,\psi_+		~~=~~
+		-\,\frac 1 {2m}\, \big\{ \vec\nabla ~+~ i\,\vec A\big \}^2\,\psi_+
+		~~+~~  \frac{i\,\vec B}{2m}\, \psi_+  ~~-~~  A_0\,\psi_+\,.
+\end{equation}
+	Rescaling $ A^\mu ~\to~ e\,A^\mu $, and switching to the Gaussian units,
+	we arrive to
+\begin{equation}
+\label{pauli}
+	i\,\hbar\,\p_t\,\psi_+	~~=~~
+		\lgr
+			\frac 1 {2m}\ \big\{ \vec p ~+~ \frac e c\,\vec A \big\}^2
+			~-~  e\,A_0
+			~+~  \frac{i e \hbar}{2m}\,\vec B
+		\rgr \psi_+\,,
+\end{equation}
+	which is nothing but the \emph{Pauli equation}.
+	Notice once again that the $ \sigma $-matrices are absent from equations \eqref{schrod} and \eqref{pauli}.
+	Spin is the intrinsic property of the wavefunction.
+
+	The factor of $ i $ in the magnetic moment term in Eq.~\eqref{pauli} has a double r\^ole.
+	First, it is needed by the correspondence
+\[
+	\vec \sigma	~~\to~~		i\,\ii\,,~~ i\,\jj\,,~~ i\,\kk\,,
+\]
+	because the $ \sigma $-matrices are hermitean.
+	Second (and actually the same), as magnetic field $ \vec B $ is an axial vector,
+	multiplying it by $ i $ turns it into a polar vector. 
+
+	It is precisely the form of equation \eqref{pauli} that establishes both the quaternionic form
+	of the Schr\"odinger equation
+	and the fact that the Dirac Lagrangian \eqref{L-massive} is correct.
+	Equation \eqref{pauli} involves a single two-component spinor $ \psi_+ $.
+	As a complex quaternion, $ \psi_+ $ only occupies a half of the quaternionic space,
+	and in the most	general form it can be written as
+\[
+	\psi_+		~~=~~	\psi\,P_L\,.
+\]
+
+
+
 
 \pagebreak
 \begin{itemize}
-
-\item Gauge transformations
-
-\item Dirac lagrangian
-
-\item Standard representation
 
 \item Dirac equation
 
