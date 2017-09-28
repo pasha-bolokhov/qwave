@@ -1043,11 +1043,11 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \[
 	\psi_\pm	~~\to~~		e^{-i m t}\, \psi_\pm\,.
 \]
-	In the first equation in \eqref{dirac-standard}, the mass term is now gone:
+	The mass term is now gone in that equation:
 \begin{equation}
 	i\,\p_0\,\psi_+		~~=~~	(\vec\nabla ~+~ i\,\vec A)\,\psi_-  ~~-~~  A_0\, \psi_+\,,
 \end{equation}
-	while in the second term the mass term doubles.
+	while in the second equation the mass term doubles.
 	Taking the large-mass limit we find
 \[
 	2m\,\psi_-	~~=~~	(\vec\nabla ~+~ i\,\vec A)\,\psi_+\,,
@@ -1067,7 +1067,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \[
 	(\vec\nabla ~+~ i\,\vec A)^2	~~=~~	-\, \big\{\vec\nabla ~+~ i\,\vec A\big\}^2  ~~+~~  i\,\vec B\,,
 \]
-	in operator form.
+	in the operator form.
 	We thus get
 \begin{equation}
 \label{schrod}
@@ -1081,7 +1081,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \label{pauli}
 	i\,\hbar\,\p_t\,\psi_+	~~=~~
 		\lgr
-			\frac 1 {2m}\ \big\{ \vec p ~+~ \frac e c\,\vec A \big\}^2
+			\frac 1 {2m}\, \big\{ \vec p ~+~ \frac e c\,\vec A \big\}^2
 			~-~  e\,A_0
 			~+~  \frac{i e \hbar}{2 m c}\,\vec B
 		\rgr \psi_+\,,
@@ -1095,9 +1095,9 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \[
 	\vec \sigma	~~\to~~		i\,\ii\,,~~ i\,\jj\,,~~ i\,\kk\,,
 \]
-	because the $ \sigma $-matrices are hermitean.
-	Second (and actually the same), as magnetic field $ \vec B $ is an axial vector,
-	multiplying it by $ i $ turns it into a polar vector. 
+	because the $ \sigma $-matrices are hermitean, and the quaternionic units are not.
+	Second (and actually the same), by multiplying the magnetic field $ \vec B $,
+	it turns it from an axial vector into a polar vector $ i\,\vec B $.
 
 	It is precisely the form of equation \eqref{pauli} that establishes both the quaternionic form
 	of the Schr\"odinger equation
@@ -1108,16 +1108,39 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \[
 	\psi_+		~~=~~	\psi\,P_L\,.
 \]
+	In fact this restriction can always be imposed in the end.
+	The Schr\"odinger equation \eqref{pauli} can be solved for an arbitrary $ \psi $,
+	and then projector $ P_L $ can be applied.
+	The fact that the set of left-handed spinors forms an ideal guarantees that
+	the projection will be a solution too.
+
+	The right-handed projection $ \psi\,P_R $ will also be a solution, of course.
+	It may either represent the same solution, or a different one.
+	It can always be ``moved'' to the left-handed space by multiplying by $ \jj $
+	on the right.
+
+	The magnetic moment term in Eq.~\eqref{pauli} is the only signature of quaternions
+	in that equation.
+	Without it, the equation looks exactly like the ordinary Schr\"odinger equation,
+\begin{equation}
+\label{simple-schrod}
+	i\,\hbar\,\p_t\,\psi	~~=~~
+		\lgr
+			\frac {p^2} {2m}
+			~+~  V
+		\rgr \psi\,,
+\end{equation}
+	where we have dropped the gauge field for simplicity.
+	For a complexified quaternion $ \psi $, this equation falls apart into four
+	identical complex equations.
+	So the non-relativistic Quantum Mechanics essentially only needs complex numbers.
+	We stress again that it is the spin of the particle that calls for the
+	quaternionic appearance of the wavefunction.
+	
 
 
 
-
-\pagebreak
 \begin{itemize}
-
-\item Dirac equation
-
-\item Non-relativistic limit
 
 \item Current
 
@@ -1136,6 +1159,14 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \section{Spinors}
 \label{section-spinors}
 
+	So how do we deduce the bases \eqref{lbasis} and \eqref{rbasis} for spinors?
+	We start from the correspondence
+\begin{equation}
+	\sigma_1\,,~~ \sigma_2\,,~~ \sigma_3	~~\to~~		i\,\ii\,,~~ i\,\jj\,,~~ i\,\kk\,,
+\end{equation}
+	for the Pauli matrices.
+	This is a very natural association, and the only other reasonably alternative choice here
+	would be to choose a different sign.
 
 
 
