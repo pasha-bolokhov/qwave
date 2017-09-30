@@ -1166,10 +1166,210 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \end{equation}
 	for the Pauli matrices.
 	This is a very natural association, and the only other reasonably alternative choice here
-	would be to choose a different sign.
+	would be a different sign on the right-hand side.
+
+        Next we build the spin-up and spin-down states, assuming the rest frame of reference.
+	The operator of the canonical $ z $-component of spin should be
+\[
+	\frac{\sigma^3} 2	~~\to~~		\frac{i\,\kk} 2\,,	
+\]
+	so the up- and down-states should satisfy
+\begin{equation}
+	i\,\kk\, \psi_\uparrow	~~=~~		+\,\psi_\uparrow
+\end{equation}
+	and
+\begin{equation}
+	i\,\kk\, \psi_\downarrow	~~=~~		-\,\psi_\downarrow\,.
+\end{equation}
+	Or, in other words,
+\begin{equation}
+\label{updown}
+	(1 ~\mp~ i\,\kk)\, \psi_{\uparrow,\downarrow}	~~=~~	0\,.
+\end{equation}
+
+	The reason that a product of two complex quaternions can vanish, is because
+	the algebra of complex quaternions does not admit a positive-definite norm.
+	We can still use the usual quaternionic norm,
+\begin{equation}
+\label{qnorm}
+	\|\,a\,\|^2	~~=~~	a_0^2  ~~+~~  a_1^2  ~~+~~  a_2^2  ~~+~~  a_3^2\,,
+\end{equation}
+	ignoring the fact that $ a_0 $, ... are complex numbers.
+	Such a norm will be multiplicative, but not positive-definite.
+	The reason the product of the two factors in Eq.~\eqref{updown} vanishes 
+	is because the norm of at least one of those factors vanishes.
+	Indeed, the norm of $ 1 ~\mp~ i\,\kk $ as calculated via Eq.~\eqref{qnorm} is zero.
+
+	So how about $ \psi_{\uparrow,\downarrow} $? How many solutions can there be?
+	These questions are easily answered by noticing that objects $ 1 ~+~ i\,\kk $ 
+	and $ 1 ~-~ i\,\kk $ are, in fact, projectors:
+\begin{align}
+%
+	\notag
+	&
+	P_L	~~=~~	\frac { 1 ~+~ i\,\kk } 2\,,
+	&
+	P_L^2	~~=~~	P_L\,,
+	\\[3mm]
+%	
+	&
+	P_R	~~=~~	\frac { 1 ~-~ i\,\kk } 2\,,
+	&
+	P_R^2	~~=~~	P_R\,,
+\end{align}
+	which we judiciously have named them left- and right- projectors.
+	Indeed, by multiplying a quaternion on the left (or equally well, on the right) by $ P_L $,
+	we are obviously performing a linear operation upon the components of that quaternion.
+	The square of such an operation equals the operation itself $ \,\Rightarrow\, $
+	the operation is a projection.
+	Obviously the same is true for $ P_R $.
+
+	That means that if we run $ \psi $ through all values of complex quaternions,
+	the product $ P_L \psi $ will span only a portion of the quaternionic space
+	--- an ideal.
+	What fraction of the entire algebra does it span?
+	We notice that $ P_L $ and $ P_R $ are complementary projectors:
+\begin{align}
+	&
+	P_R	~~=~~	P_L^*\,,
+	&
+	P_L  ~~+~~  P_R		~~=~~	1\,.
+\end{align}
+	Because they are symmetric, they can only project equal-size subsets of the algebra.
+	And since they are complementary to each other, the union of those subsets
+	must comprise the entire algebra.
+	In other words, $ P_L $ and $ P_R $ split the algebra in two halves.
+
+	Now, equation \eqref{updown} can re-written as,
+\begin{equation}
+\label{PRL}
+	P_{R,L}\, \psi_{\uparrow,\downarrow}		~~=~~		0\,,
+\end{equation}
+	meaning that the most general $ \psi_\uparrow $ must sit in one half of the algebra,
+	while the most general $ \psi_\downarrow $ must sit in the other half.
+	Since a generic complex quaternion has four complex components,
+	there are two complex solutions for $ \psi_\uparrow $ and as many for $ \psi_\downarrow $.
+	We have to stress here that these halves are \emph{not identified} with the left-
+	and right-handed chiral spaces.
+	For this reason we have not given names to these supspaces, other than ``spin-up'' and
+	``spin-down'' spaces.
+
+	The easiest solution to \eqref{PRL} is using the orthogonality of the projectors:
+\begin{align}
+	&
+	P_R\, P_L	~~=~~	0\,,
+	&
+	P_L\, P_R	~~=~~	0\,.
+\end{align}
+	So, seemingly $ P_L $ could be identified with a spin-up state, and $ P_R $ --- with the corresponding
+	spin-down state.
+	However, these are states of different chiralities.
+	Indeed, since $ P_L ~=~ P_R^* $, such ``spinors'' transform in the mutually-conjugate
+	representations of the Lorentz group.
+	This fact by puts them into the opposite chirality spaces.
+
+	Let us summarize our goal and achivements now.
+	We are looking for four complex states $ \psi_{L\uparrow} $, $ \psi_{L\downarrow} $, $ \psi_{R\uparrow} $
+	and $ \psi_{R\downarrow} $.
+	We have already found
+\begin{align}
+	&
+	\psi_{L\uparrow}		~~=~~	P_L\,,
+	&
+	\psi_{R\downarrow}	~~=~~	P_R\,.
+\end{align}
+	It is not difficult to find the other two states.
+	For example, if one wishes to avoid pure guessing, which would perfectly work here too,
+	we know that matrix $ -i \sigma^2 $ turns a spin-up state into a spin-down state:
+\[
+	-i\,\sigma^2\,
+		\lgr
+		\begin{matrix}
+			1 \\[2mm]
+			0
+		\end{matrix}
+		\rgr
+	~~=~~
+		\lgr
+		\begin{matrix}
+			0	&	-1 \\[2mm]
+			1	&	0
+		\end{matrix}
+		\rgr
+		\lgr
+		\begin{matrix}
+			1 \\[2mm]
+			0
+		\end{matrix}
+		\rgr
+	~~=~~
+		\lgr
+		\begin{matrix}
+			0 \\[2mm]
+			1
+		\end{matrix}
+		\rgr.	
+\]
+	This exactly corresponds to multiplying by $ \jj $ on the left, and we arrive to
+\begin{align}
+	&
+	\psi_{L\downarrow}	~~=~~	\phantom{-}\jj\,P_L\,,
+	&
+	\psi_{R\uparrow}		~~=~~	-\jj\,P_R\,.
+\end{align}
+
+	So we recap that the \emph{left-handed} spinors can be written as
+\begin{equation}
+\label{lbasis-again}
+	\psi_L	~~=~~	\xi_L\,P_L  ~~+~~  \chi_L\,\jj\,P_L\,,
+\end{equation}
+	while the \emph{right-handed} spinors are represented as
+\begin{equation}
+\label{rbasis-again}
+	\psi_R	~~=~~	-\xi_R\,\jj\,P_R  ~~+~~  \chi_R\,P_R\,.
+\end{equation}
+
+	A few important comments are in order here.
+	The chiral subspaces are defined here by multiplying
+	arbitrary quaterions by projectors $ P_L $ or $ P_R $ on the \emph{right}.
+	In other words, $ \psi\, P_L $ spans the set of all left-handed spinors,
+	and $ \psi\, P_R $ of all right-handed.
+	This way, right multiplication splits the set of quaternions into
+	the two chirality subspaces.
+	Whereas, \emph{left} multiplication splits the quaternions into
+	spin-up and spin-down subspaces, because \emph{e.g.}
+\[
+	P_R\, (P_L\, \psi)	~~=~~	0\,.
+\]
+	It is a trivial fact now that a set of the type $ \big\{\, P_L\, \psi \,\} $ or $ \big\{\, \psi\, P_L \,\} $
+	forms a left (right) ideal, since for an arbitrary quaternion $ a $,
+	the product, say,
+\[
+	a\, (\psi\, P_L)	~~=~~	(a\, \psi)\, P_L\,,
+\]
+	resides in the same subspace as $ \psi\, P_L $.
+
+	The other important remark is about the amount of freedom that we have in defining
+	the bases via Eqs.~\eqref{lbasis-again}, \eqref{rbasis-again}.
+	We have freedom in choosing the component of the spin to be measurable --- for which we chose $ \kk $.
+	The other freedom was in parametrizing the spin-down component of $ \psi_L $,
+	for which we chose $ \jj $ as an orthogonal direction.
+	Overall, we could have chosen any two unit vectors $ \hat a $ and $ \hat b $ in place of $ \kk $
+	and $ \jj $, subject to the only restriction
+\[
+	\hat a \cdot \hat b	~~=~~	0\,.
+\]
+
+\begin{itemize}
+
+\item	Parity
+
+\item	Cl(2) $ \otimes $ Cl(2)
+
+\end{itemize}
 
 
-
+\pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                              %
 %                                                                              %
