@@ -1393,8 +1393,16 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	As soon as we are able to differentiate, variational calculus sets in place.
 	We start with regular quaternions.
 
-	It is well known that there is no existing analyticity theory for quaternions
-	analogous to that for complex numbers.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                    O R D I N A R Y   Q U A T E R N I O N S                   %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ordinary quaternions}
+
+	It is well known that there is no existing analyticity theory of quaternions
+	analogous to that of complex numbers.
 	Even the notion of a derivative is not well established.
 	While complex analyticity rests on holomorphic functions that depend on $ z $ and
 	are independent of $ \ov z $,
@@ -1431,6 +1439,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \end{equation}
 	We introduce a derivative $ \p $,
 \begin{equation}
+\label{diff-d}
 	\p	~~\equiv~~   \p_t  ~~+~~  \vec\nabla	~~=~~	\p_t  ~~+~~  
 								\ii\,\p_x  ~~+~~  \jj\,\p_y  ~~+~~  \kk\,\p_z\,.
 \end{equation}
@@ -1439,6 +1448,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	as we will see below. However, to keep notations flat and straightforward, we just
 	call it $ \p $, and we define a conjugate derivative as
 \begin{equation}
+\label{diff-d-conj}
 	\wt\p	~~\equiv~~   \p_t  ~~-~~  \vec\nabla	~~=~~	\p_t  ~~-~~  
 								\ii\,\p_x  ~~-~~  \jj\,\p_y  ~~-~~  \kk\,\p_z\,.
 \end{equation}
@@ -1448,16 +1458,107 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \begin{align}
 %
 \notag
-	\p\,q		& ~~=~~		-2		& \p\,\wt q	& ~~=~~		~~~~4\\
+	\p\,q		& ~~=~~		-2		& \p\,\wt q	& ~~=~~		~~~~4\\[2mm]
 %
+\label{dq}
 	\wt\p\,q	& ~~=~~		~~~~4		& \wt\p\,\wt q	& ~~=~~		-2\,,
 \end{align}
 	and
 \begin{align}
 %
+\notag
+	\p\,a q		& ~~=~~		-2\,\wt a	& \p\,a \wt q		& ~~=~~		~~~~4\,a_0\\[3mm]
 %
+\label{daq}
+	\wt\p\, a q	& ~~=~~		~~~~4\,a_0	& \wt\p\, a \wt q	& ~~=~~		-2\,\wt a\,.
 \end{align}
 	enable us to perform differentiation.
+	Note that the set of identities \eqref{dq} applies equally well when the derivative is acting from the right.
+
+	Any function of $ q $ which can be represented as a power series (in fact, any \emph{analytical} function
+	of coordinates $ t $, $ x $, $ y $, $ z $), 
+\begin{equation}
+\label{q-series}
+	f(q)	~~=~~	\dots ~~+~~ \alpha\,q\,\beta\,q\,\gamma\,q\,\delta  ~~+~~ \dots
+\end{equation}
+	can now be differentiated using Eqs.~\eqref{dq}, \eqref{daq}.
+	It is sufficient to define the action of the derivative\footnote{We are not really ``defining'' this action,
+	as it is explicitly defined in Eq.~\eqref{diff-d}, but instead giving a recipe how to efficiently compute such a derivative.}
+	on the monomial in \eqref{q-series}.
+	Derivative $ \p $ will act on each factor of $ q $ in \eqref{q-series} in turn.
+	Let us underline each factor when it is differentiated, and when it is not --- it can be considered a constant:
+\begin{equation}
+\label{diff-term}
+	\p~ \alpha\,q\,\beta\,q\,\gamma\,q\,\delta	~~=~~
+		\underline \p~ \alpha\,\underline q\,\beta\,q\,\gamma\,q\,\delta  ~~+~~
+		\underline \p~ \alpha\,q\,\beta\,\underline q\,\gamma\,q\,\delta  ~~+~~
+		\underline \p~ \alpha\,q\,\beta\,q\,\gamma\,\underline q\,\delta\,.
+\end{equation}
+	We are also underlining the derivative operator, so that in the case when there is more than
+	one derivative is present, it is clear which one acts on what variable.
+	Every factor in \eqref{diff-term} that is not differentiated can be considered a constant.
+	Thus, we can use the first one of identities \eqref{daq},
+\[
+	\p~ \alpha\,q\,\beta\,q\,\gamma\,q\,\delta	~~=~~
+		-\,2\,\wt\alpha\,\beta\,q\,\gamma\,q\,\delta  ~~-~~
+		2\, \wt\beta\, \wt q\, \wt\alpha\, \gamma\, q\, \delta  ~~-~~
+		2\, \wt\gamma\, \wt q\, \wt\beta\, \wt q\, \wt\alpha\, \delta\,.
+\]
+	The efficiency of this approach is that we did not have to deal with components.
+
+	In which sense is $ \p f(q) $ a derivative of $ f(q) $?
+	Can we restore an infinitesimal change $ \Delta f $ due the increment $ \Delta q $, using this derivative?
+	The answer is not quite straightforward, as the correct expression is given by
+\begin{equation}
+\label{delta-f}
+	\Delta f	~~=~~	\underline f(q)\, \frac{ \wt\p\, \Delta q ~+~ \Delta \wt q\, \p } 2\,.
+\end{equation}
+	This result is obvious because the fraction actually equals $ \p_\mu\, \Delta q^\mu $.
+	Being a scalar, it can be written on either side of $ f(q) $.
+	The problem here is that one of the two terms in that fraction will
+	necessarily have a derivative operator $ \p $ sitting furthest away from $ f(q) $,
+\[
+	f(q)\, \Delta \wt q\, \p\,.
+\]
+	and so will not form a derivative in our sense.
+	In other words, here the derivative has to depend on the increment $ \Delta q $.
+
+	Instead of engaging with this problem, let us switch to \emph{real} functions $ f(q) $ ---
+	our prime subject of interest --- since the Lagrangian is real.
+	For real $ f(q) $, the rightmost term in the fraction in \eqref{delta-f} commutes with $ f(q) $,
+	and so
+\[
+	\Delta f	~~=~~	\frac 1 2 \lgr \Delta \wt q\, \p\, f(q)  ~~+~~  f(q)\, \wt \p\, \Delta q \rgr,
+\]
+	where we also have replaced $ f(q) $ with $ \wt f(q) $ in the first term in the bracket.
+	The extremum of $ f(q) $ is obviously achieved when
+\begin{equation}
+	\p\,f(q)	~~=~~	0\,,
+\end{equation}
+	since this also implies that $ \wt f(q)\, \wt \p ~=~ 0 $.
+	Being able to find the extremum of a real function, we now know how to derive the
+	extremum of the action --- that is, the equations of motion.
+	The derivative just gets promoted to a variational derivative.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                     C O M P L E X   Q U A T E R N I O N S                    %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Complex quaternions}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                 S P I N O R S                                %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Spinors}
+
+
 
 
 \pagebreak
