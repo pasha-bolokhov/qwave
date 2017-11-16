@@ -1416,7 +1416,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	In other words, variable $ z $ cannot be converted into $ \ov z $ by
 	multiplying it by any constants.
 	This is \emph{not so} with quaternions.
-	For, given a quaternion $ q $, we find that
+	For, given a quaternion $ q $, we find that a combination
 \begin{equation}
 	-\, \frac{ q  ~+~  \ii\,q\,\ii  ~+~  \jj\,q\,\jj  ~+~  \kk\,q\,\kk } 2
 	~~=~~
@@ -1645,6 +1645,35 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 %                                                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Constrained complex quaternions --- vectors}
+
+	Vectors open up quite an interesting story, as the only physical vector
+	field variables are gauge fields.
+	Thus, differentiation with respect to vectors enables us to derive
+	and expression for the current, as well as to formally derive the form 
+	of the quaternionic Maxwell's equation.
+
+	Formally vectors can be defined by the constraint condition
+\begin{equation}
+	q^\dag	~~=~~	q\,,
+\end{equation}
+	which means that only four real components of it are non-zero:
+\begin{equation}
+	q	~~\equiv~~	t  ~~+~~  i\,\vec r
+		~~=~~		t  ~~+~~  i\,\big(\, \ii\,x  ~~+~~  \jj\,y  ~~+~~  \kk\,z \,\big)\,.
+\end{equation}
+
+	In relation to it we define the derivative operators
+\begin{equation}
+	\p	~~\equiv~~	\p_t  ~~+~~  i\,\vec\nabla
+		~~=~~		\p_t  ~~+~~  i\,\big( \ii\,\p_x  ~~+~~  \ii\,\p_y  ~~+~~  \kk\,\p_z \big)
+\end{equation}
+	and
+\begin{equation}
+	\wt\p	~~=~~	\p^*
+		~~=~~	\p_t  ~~-~~  i\,\big( \ii\,\p_x  ~~+~~  \ii\,\p_y  ~~+~~  \kk\,\p_z \big)\,.
+\end{equation}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
