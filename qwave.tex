@@ -1536,27 +1536,88 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	\p\,f(q)	~~=~~	0\,,
 \end{equation}
 	since this also implies that $ \wt f(q)\, \wt \p ~=~ 0 $.
+
+	Let us see how this works in practice.
+	Let us apply a derivative operator $ \p $ on a real function $ f(q) $.
+	Even if we do not know the form of $ f(q) $, viewed as a series, it can always be represented as
+\begin{equation}
+\label{f-real}
+	f(q)		~~=~~	\dots  ~~+~~  q\,a  ~~+~~  \wt a\, \wt q  ~~+~~  \dots\,,
+\end{equation}
+	since when we differentiate a particular factor of $ q $ in a given monomial term,
+	all the other factors of $ q $ in that term are considered constant.
+	Applying identities \eqref{dq}, \eqref{daq} to function \eqref{f-real}, we get
+\begin{equation}
+\label{der-f}
+	\p\, f(q)	~~\supset~~	-2\,a  ~~+~~  4\,a_0	~~=~~	2\,\wt a\,.
+\end{equation}
+	Note that we would have arrived to the same result had we written $ q $ and $ a $ in Eq.~\eqref{f-real}
+	in a different order,
+\begin{equation}
+	f(q)		~~=~~	\dots  ~~+~~  a\,q  ~~+~~  \wt q\, \wt a  ~~+~~  \dots\,,
+\end{equation}
+	only now the other identities in \eqref{dq}, \eqref{daq} would have been involved.
+
+	Now let us apply $ \wt\p $ to Eq.~\eqref{f-real} instead.
+	We find,
+\begin{equation}
+\label{der-f-conj}
+	\wt \p\, f(q)	~~=~~	\dots  ~~+~~  4\,a  ~~-~~  2\,a  ~~+~~  \dots	
+			~~=~~	\dots  ~~+~~  2\,a  ~~+~~  \dots\,.
+\end{equation}
+	Equations \eqref{der-f} and \eqref{der-f-conj} tell us that $ (1/2)\,\p $ in fact differentiates
+	with respect $ \wt q $, while $ (1/2)\,\wt \p $ --- with respect to $ q $.
+	This is exactly the same as with complex numbers, even with a matching factor of $ 1/2 $.
+	Still, we would like to leave our definitions of $ \p $ and $ \wt \p $ as they are
+	in order to keep notations plain.
+
 	Being able to find the extremum of a real function, we now know how to derive the
 	extremum of the action --- that is, the equations of motion.
-	The derivative just gets promoted to a variational derivative.
+	The derivative gets promoted to a variational derivative.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                              %
-%                     C O M P L E X   Q U A T E R N I O N S                    %
+%             G E N E R I C   C O M P L E X   Q U A T E R N I O N S            %
 %                                                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Complex quaternions}
+\subsection{Generic complex quaternions}
+	
+	Does the above picture of differentiation change for complex quaternions?
+	If we are talking about generic complex quaternions --- not really.
+	Generic complex quaternions have eight real degrees of freedom.
+	Everything stays the same, taking into account that the components $ t $, $ x $, $ y $ 
+	and $ z $ are now \emph{complex numbers}.
+
+	The derivatives
+\begin{align}
+%
+	\p	& ~~=~~	\p_t  ~~+~~  \ii\,\p_x  ~~+~~  \jj\,\p_y  ~~+~~  \kk\,\p_z\,,
+	\\[2mm]
+%
+	\wt\p	& ~~=~~	\p_t  ~~-~~  \ii\,\p_x  ~~-~~  \jj\,\p_y  ~~-~~  \kk\,\p_z
+\end{align}
+	stay exactly what they are.
+	Here, of course, we assume that
 
 
+
+
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%       C O N S T R A I N E D   Q U A T E R N I O N S   -   V E C T O R S      %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Constrained complex quaternions --- vectors}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                              %
-%                                 S P I N O R S                                %
+%       C O N S T R A I N E D   Q U A T E R N I O N S   -   S P I N O R S      %
 %                                                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Spinors}
+\subsection{Constrained complex quaternions --- spinors}
 
 
 
