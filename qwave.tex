@@ -1374,7 +1374,8 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \end{itemize}
 
 
-\pagebreak
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                              %
 %                                                                              %
@@ -1385,9 +1386,81 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \section{Differentiation}
 \label{section-diff}
 
+	Derivation of the equations of motion from the Lagrangian involves one
+	crucial step --- variation, which we will loosely call differentiation.
+	Indeed, the problem of extremizing the action essentially reduces
+	to differentiating with respect to a quaternion.
+	As soon as we are able to differentiate, variational calculus sets in place.
+	We start with regular quaternions.
+
+	It is well known that there is no existing analyticity theory for quaternions
+	analogous to that for complex numbers.
+	Even the notion of a derivative is not well established.
+	While complex analyticity rests on holomorphic functions that depend on $ z $ and
+	are independent of $ \ov z $,
+\[
+	f(z,\, \ov z)	~~=~~	f(z)\,,
+\]
+	this property cannot be extended to quaternions.
+
+	There is one crucial reason for this: if a complex function depends on $ z $, there is no
+	way that it can be represented as a function of $ \ov z $.
+	In other words, variable $ z $ cannot be converted into $ \ov z $ by
+	multiplying it by any constants.
+	This is \emph{not so} with quaternions.
+	For, given a quaternion $ q $, we find that
+\begin{equation}
+	-\, \frac{ q  ~+~  \ii\,q\,\ii  ~+~  \jj\,q\,\jj  ~+~  \kk\,q\,\kk } 2
+	~~=~~
+	\wt q
+\end{equation}
+	is exactly the conjugate of $ q $.
+	Any other type of conjugation that can be introduced for quaternions (say, the one that
+	only flips the sign of a single imaginary unit $ \ii $) can also be represented in such
+	an ``arithmetic'' form.
+	That means that any function $ f(q) $ can be viewed as a function of $ \wt q $, just
+	with different coefficients.
+	So the notion of holomorphy cannot be applied to quaternions, at least directly.
+
+	It is, however, possible to define a convenient notion of a derivative.
+	It works especially well if the function being differentiated is real (although it does not have to be).
+
+	Let us say that $ f(q) $ is a function of variable $ q $,
+\begin{equation}
+	q	~~\equiv~~	t  ~~+~~  \vec r	~~=~~	t  ~~+~~  x\,\ii  ~~+~~  y\,\jj  ~~+~~  z\,\kk.
+\end{equation}
+	We introduce a derivative $ \p $,
+\begin{equation}
+	\p	~~\equiv~~   \p_t  ~~+~~  \vec\nabla	~~=~~	\p_t  ~~+~~  
+								\ii\,\p_x  ~~+~~  \jj\,\p_y  ~~+~~  \kk\,\p_z\,.
+\end{equation}
+	Strictly speaking, in analogy to complex numbers,
+	we should call this quantity a conjugate derivative $ 2\,\wt\p $ multiplied by a factor of two or so,
+	as we will see below. However, to keep notations flat and straightforward, we just
+	call it $ \p $, and we define a conjugate derivative as
+\begin{equation}
+	\wt\p	~~\equiv~~   \p_t  ~~-~~  \vec\nabla	~~=~~	\p_t  ~~-~~  
+								\ii\,\p_x  ~~-~~  \jj\,\p_y  ~~-~~  \kk\,\p_z\,.
+\end{equation}
+
+	Let $ a $ denote an arbitrary quaternionic constant.
+	Then the following key identities
+\begin{align}
+%
+\notag
+	\p\,q		& ~~=~~		-2		& \p\,\wt q	& ~~=~~		~~~~4\\
+%
+	\wt\p\,q	& ~~=~~		~~~~4		& \wt\p\,\wt q	& ~~=~~		-2\,,
+\end{align}
+	and
+\begin{align}
+%
+%
+\end{align}
+	enable us to perform differentiation.
 
 
-
+\pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                              %
 %                                                                              %
