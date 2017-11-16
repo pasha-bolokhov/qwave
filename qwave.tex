@@ -1513,15 +1513,16 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \label{delta-f}
 	\Delta f	~~=~~	\underline f(q)\, \frac{ \wt\p\, \Delta q ~+~ \Delta \wt q\, \p } 2\,.
 \end{equation}
-	This result is obvious because the fraction actually equals $ \p_\mu\, \Delta q^\mu $.
+	This result is obvious because the fraction here actually equals $ \p_\mu\, \Delta q^\mu $.
 	Being a scalar, it can be written on either side of $ f(q) $.
 	The problem here is that one of the two terms in that fraction will
 	necessarily have a derivative operator $ \p $ sitting furthest away from $ f(q) $,
 \[
-	f(q)\, \Delta \wt q\, \p\,.
+	f(q)\, \Delta \wt q\, \p\,,
 \]
 	and so will not form a derivative in our sense.
-	In other words, here the derivative has to depend on the increment $ \Delta q $.
+	In other words, here the derivative has to depend on the increment $ \Delta q $
+	in order to correctly reproduce $ \Delta f $.
 
 	Instead of engaging with this problem, let us switch to \emph{real} functions $ f(q) $ ---
 	our prime subject of interest --- since the Lagrangian is real.
@@ -1539,13 +1540,13 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 
 	Let us see how this works in practice.
 	Let us apply a derivative operator $ \p $ on a real function $ f(q) $.
-	Even if we do not know the form of $ f(q) $, viewed as a series, it can always be represented as
+	Even if we do not know the form of $ f(q) $, when viewed as a series it can always be represented as
 \begin{equation}
 \label{f-real}
 	f(q)		~~=~~	\dots  ~~+~~  q\,a  ~~+~~  \wt a\, \wt q  ~~+~~  \dots\,,
 \end{equation}
 	since when we differentiate a particular factor of $ q $ in a given monomial term,
-	all the other factors of $ q $ in that term are considered constant.
+	all the other factors of $ q $ in that term can be considered constant and are absorbed into $ a $.
 	Applying identities \eqref{dq}, \eqref{daq} to function \eqref{f-real}, we get
 \begin{equation}
 \label{der-f}
@@ -1558,7 +1559,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \end{equation}
 	only now the other identities in \eqref{dq}, \eqref{daq} would have been involved.
 
-	Now let us apply $ \wt\p $ to Eq.~\eqref{f-real} instead.
+	Now let us apply operator $ \wt\p $ to Eq.~\eqref{f-real}.
 	We find,
 \begin{equation}
 \label{der-f-conj}
@@ -1592,16 +1593,50 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	The derivatives
 \begin{align}
 %
+\notag
 	\p	& ~~=~~	\p_t  ~~+~~  \ii\,\p_x  ~~+~~  \jj\,\p_y  ~~+~~  \kk\,\p_z\,,
 	\\[2mm]
 %
+\label{der-cquat}
 	\wt\p	& ~~=~~	\p_t  ~~-~~  \ii\,\p_x  ~~-~~  \jj\,\p_y  ~~-~~  \kk\,\p_z
 \end{align}
 	stay exactly what they are.
-	Here, of course, we assume that
+	Here, of course, we assume that the complex derivatives are defined in the usual way,
+\begin{equation}
+	\p_t	~~=~~	\frac 1 2\, \big\{\, \p_{t_1}  ~-~ i\,\p_{t_2}\,\big\} \,,\qquad	\dots\,.
+\end{equation}
+	We also have the two conjugates of \eqref{der-cquat},
+\begin{align}
+%
+\notag
+	\p^*		& ~~=~~	\p_t^*  ~~+~~  \ii\,\p_x^*  ~~+~~  \jj\,\p_y^*  ~~+~~  \kk\,\p_z^*\,,
+	\\[2mm]
+%
+\label{der-cquat-conj}
+	\p^\dag	& ~~=~~	\p_t^*  ~~-~~  \ii\,\p_x^*  ~~-~~  \jj\,\p_y^*  ~~-~~  \kk\,\p_z^*.
+\end{align}
+	Obviously, any function of $ q $ (and not $ q^* $) will have 
+	derivatives $ \p^* $ and $ \p^\dag $ vanishing on it.
 
+	Relations \eqref{dq} and \eqref{daq} are valid in our complex case
+	verbatim.
+	There is also a complex conjugated copy of them.
+	We are not going to pay much attention to these relations.
 
+	We are able to re-use literally all the formulas applicable to the differentiation
+	with respect to regular quaternions, because complex quaternions have all
+	eight degrees of freedom occupied.
 
+	The story becomes more interesting when we have to address \emph{constrained}
+	quaternions --- \emph{e.g.} vectors or spinors.
+	We call them constrained, because not all eight components in them are independent
+	(or non-zero).
+	Thus, the derivatives \eqref{der-cquat}, \eqref{der-cquat-conj} cannot be applied to
+	them verbatim to produce a meaningful result.
+
+	There is also the fieldstrength $ \Phi $ which is a constrained quaternion,
+	but we normally do not vary with respect fieldstrengths.
+	
 
 \pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
