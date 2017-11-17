@@ -1400,6 +1400,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 %                                                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Ordinary quaternions}
+\label{sec-ordinary-quat}
 
 	It is well known that there is no existing analyticity theory of quaternions
 	analogous to that of complex numbers.
@@ -1583,6 +1584,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 %                                                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Generic complex quaternions}
+\label{sec-cpx-quat}
 	
 	Does the above picture of differentiation change for complex quaternions?
 	If we are talking about generic complex quaternions --- not really.
@@ -1704,12 +1706,162 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	Full Dirac spinors are just complex quaternions, and so differentiation
 	with respect to them is in fact addressed by operators \eqref{der-cquat}.
 	There is nothing new from that perspective.
+	One only has to keep in mind that spinors are Grassmann numbers.
 
 	Weyl spinors, however are constrained.
 	Even though a single Weyl spinor $ \psi_L $ or $ \psi_R $ has all eight
-	components non-zero, they only have four independent ones.
+	components non-zero, it only has four independent ones.
 
-	
+	Let us take a left-handed fermion $ \psi_L $,
+\begin{equation}
+	\psi_L	~~=~~	\xi_L\,P_L  ~~+~~  \chi_L\,\jj\,P_L\,.
+\end{equation}
+	It turns out, that differentiation with respect to $ \psi_L $ is only
+	meaningful when done from the right.
+	The reason behind is that when multiplying by anything from the left, it is 
+	not possible to ``cancel'' the projectors $ P_L $.
+	We have,
+\begin{equation}
+\label{diff-psiL}
+	\underline{\psi_L}\, \lgr \p_{\xi_L} ~-~ \jj\, \p_{\chi_L} \rgr
+	~~=~~
+	P_L  ~~+~~  P_R
+	~~=~~
+	1\,.
+\end{equation}
+	Again, we have underlined $ \psi_L $ to show that the derivatives act to the left.
+	Here $ \p_{\xi_L} $ and $ \p_{\chi_L} $ are the usual Grassmann derivatives with respect to
+	the complex components $ \xi_L $ and $ \chi_L $ correspondingly.
+	Analogously we find
+\begin{equation}
+\label{diff-psiR}
+	\underline{\psi_R}\, \lgr \jj\, \p_{\xi_R} ~+~ \p_{\chi_R} \rgr	~~=~~
+	\underline{\psi_R}\, \jj\! \lgr \p_{\xi_R} ~-~ \jj\, \p_{\chi_R} \rgr	~~=~~
+	1\,.
+\end{equation}
+	So we essentially have identified the spinor derivatives, we just need to re-write them
+	in terms of the quaternionic components $ t $, $ x $, $ y $ and $ z $.
+	Although we are really considering $ \psi_L $ and $ \psi_R $ separately,
+	let us combine them both into a single Dirac fermion.
+	This is only done for the sake of completeness --- derivative with respect to $ \psi_L $
+	does not touch $ \psi_R $ in any sense, 
+	because their components are independent complex numbers.
+	We have,
+\begin{align}
+%
+\notag
+	\psi_D	& ~~=~~
+	\frac{ \xi_L \,+\, \chi_R } 2  ~~+~~
+	\ii\, i\,\frac{\xi_R \,+\, \chi_L} 2  ~~+~~
+	\jj\, \frac{-\xi_R \,+\, \chi_L} 2  ~~+~~
+	\kk\, i\,\frac{\xi_L \,-\, \chi_R} 2
+	\\[4mm]
+%
+\label{psiD-as-quat}
+	& ~~=~~
+	t  ~~+~~  \ii\, x  ~~+~~  \jj\, y  ~~+~~  \kk\, z\,.
+\end{align}
+	Knowing this, we can express derivatives $ \p_{\xi_L}, $ \emph{etc} in terms
+	of the derivatives with respect to components $ t $, $ x $, $ y $ and $ z $.
+	Plugging them into the expressions in parentheses in equations
+	\eqref{diff-psiL} and \eqref{diff-psiR} we find,
+\begin{align}
+%
+\notag
+	\p_{\psi_L}	& ~~\propto~~
+	\frac{\p_t ~-~ i\jj\,\p_x ~-~ \jj\,\p_y ~+~ i\,\p_z} 2\,,
+	\\[5mm]
+%
+\label{prelim-psi-der}
+	\p_{\psi_R}	& ~~\propto~~
+	\frac{\p_t ~+~ i\jj\,\p_x ~-~ \jj\,\p_y ~-~ i\,\p_z} 2\,.
+\end{align}
+	Although we could write equality signs in these equations, postpone this
+	until we do the last extra step.
+	Namely, equations \eqref{prelim-psi-der} do not seem to be very aesthetic,
+	or easy to remember.
+	Notice, that the action of these derivatives will not change if we multiply
+	them by the projectors $ P_L $ and $ P_R $ on the left, correspondingly.
+	Indeed, these projectors will carve out $ \psi_L $ or $ \psi_R $ from Eq.~\eqref{psiD-as-quat},
+	before the actual derivatives will hit them.
+	It is a matter of a simple multiplication to observe that the right-hand
+	sides of Eq.~\eqref{prelim-psi-der} multiplied by the corresponding projectors,
+	match with a regular derivative $ \wt\p $ multiplied by the same projectors
+\begin{align}
+%
+\notag
+	\p_{\psi_L}	& ~~=~~		\frac 1 2\, P_L\, \wt\p\,,
+	\\[4mm]
+%
+\label{spinor-der}
+	\p_{\psi_R}	& ~~=~~		\frac 1 2\, P_R\, \wt\p\,.
+\end{align}
+	where $ \wt\p $ is defined as that for regular quaternions
+\begin{equation}
+	\wt\p	~~=~~	\p_t  ~~-~~  \ii\,\p_x  ~~-~~  \jj\,\p_y  ~~-~~  \kk\,\p_z\,.
+\end{equation}
+	From Eq.~\eqref{spinor-der}, 
+\begin{equation}
+\label{spinor-der-total}
+	\p_{\psi_L}  ~~+~~  \p_{\psi_R}  ~~=~~  \wt\p\,.
+\end{equation}
+	We remind that all derivatives in Eqs.~\eqref{spinor-der} and \eqref{spinor-der-total}
+	act to the \emph{left}.
+
+	Quite analogously, we consider the hermitean-conjugate spinors $ \psi_L^\dag $ and $ \psi_R^\dag $,
+	for which
+\begin{align}
+%
+\notag
+	\p_{\psi_L^\dag}	& ~~\propto~~	\p_{\xi_L^*}  ~~+~~  \jj\,\p_{\chi_L^*}\,,
+	\\[3mm]
+%
+\label{diff-psiLR-dag}
+	\p_{\psi_R^\dag}	& ~~\propto~~	\lgr \p_{\xi_R^*}  ~~+~~ \jj\,\p_{\chi_R^*} \rgr (-\jj)\,,
+\end{align}
+	where the derivatives now act \emph{to the right}.
+	Notice that the expressions in \eqref{diff-psiLR-dag} are precisely the hermitean conjugates
+	of those in Eqs.~\eqref{diff-psiL} and \eqref{diff-psiR}.
+	Proceeding the same way as we arrived to Eq.~\eqref{prelim-psi-der} and past it,
+	we, now unsurprisingly, find
+\begin{align}
+%
+\notag
+	\p_{\psi_L^\dag}	& ~~=~~		\frac 1 2\, \p^*\, P_L\,,
+	\\[4mm]
+%
+\label{spinor-der-dag}
+	\p_{\psi_R^\dag}	& ~~=~~		\frac 1 2\, \p^*\, P_R\,.
+\end{align}
+	We stress again that here the derivatives act to the \emph{right}.
+
+	Equations \eqref{spinor-der} and \eqref{spinor-der-dag} is our final answer
+	for the spinor derivatives.
+	The reason is that we already now how to apply a differential operator $ \p $
+	or its conjugates in an efficient way.
+
+	If an expression is linear, say in $ \psi_L $, then differentiation
+	simply ``erases'' the latter from the expression
+	(since the Lagrangian is real, one can always arrange $ \psi_L $ to stand
+	on the right of the expression).
+	Fermionic expressions are almost always linear in spinors ($ \psi_L^\dag $ or
+	$ \psi_L^* $ is an independent variable from $ \psi_L $),
+	except for four-fermion interactions.
+	Even then, Section~\ref{sec-ordinary-quat} explains how to deal with such expressions.
+
+	As was shown in Section~\ref{sec-ordinary-quat}, an extremum of a real function
+	is given when
+\[
+	\p\,f	~~=~~	0\,.
+\]
+	Whether the quaternions are ordinary or complex, does not change this.
+	As we saw above, such a derivative can be split into left- and right-handed parts,
+	each of which provides an independent equation --- for $ \psi_L $ and $ \psi_R $
+	correspondingly.
+	Thus, we have a recipe for deriving the equations of motion for Weyl spinors
+	as well as for Dirac spinors.
+
+
 
 
 \pagebreak
