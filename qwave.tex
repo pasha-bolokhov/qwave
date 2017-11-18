@@ -1851,15 +1851,54 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 
 	As was shown in Section~\ref{sec-ordinary-quat}, an extremum of a real function
 	is attained when
-\[
+\begin{equation}
+\label{extremum-eq}
 	\p\,f	~~=~~	0\,.
-\]
+\end{equation}
 	Whether the quaternions are ordinary or complex, does not change this.
 	As we saw above, such a derivative can be split into left- and right-handed parts,
 	each of which provides an independent equation --- for $ \psi_L $ and $ \psi_R $
 	correspondingly.
+	To see that, it is enough to multiply Eq.~\eqref{extremum-eq}
+	on the right by a left- or right-handed projector.
 	Thus, we have a recipe for deriving the equations of motion for Weyl spinors
 	as well as for Dirac spinors.
+
+	Let us give simple example that we use ---  a Lagrangian of a Dirac fermion,
+\begin{equation}
+	\cell	~~=~~
+			\psi_L^\dag\, i\md\, \psi_L  ~~+~~  \psi_R^\dag\, i\,\wt\md\, \psi_R
+			~~-~~  
+			\lgr m\, \psi_L^\dag\, \psi_R\, \jj  ~~+~~  \text{q.c.} \rgr  ~~+~~  \text{c.c.}
+\end{equation}
+	We will need this Lagrangian in the full form,
+\begin{align}
+%
+\notag
+	\cell	&  ~~=~~
+			\psi_L^\dag\, i\md\, \psi_L  ~~+~~  \psi_R^\dag\, i\,\wt\md\, \psi_R  ~~+~~
+			\wt\psi{}_L\, i\md^*\, \psi_L^*  ~~+~~  \wt\psi{}_R\, i\,\md^\dag\, \psi_R^*  ~~-~~
+	\\[2mm]
+%
+\label{L-dirac-expanded}
+	&  ~~-~~
+	m \lgr \psi_L^\dag\, \psi_R\, \jj  ~~+~~  \jj\, \wt\psi{}_R\, \psi_L^* \rgr
+	~~+~~
+	m \lgr \wt\psi{}_L\, \psi_R^*\, \jj  ~~+~~ \jj\, \psi_R^\dag\, \psi_L \rgr.
+\end{align}
+	Caution must be executed with respect to signs when conjugating fermions.
+	It is advisable that the reader should take a moment to understand why the signs in front of 
+	the conjugated terms are as they are shown in Eq.~\eqref{L-dirac-expanded}.
+	Let us begin with the kinetic terms first.
+	Because of Lorentz transformations (and of gauge transformations, if applicable), 
+	$ \psi_L $ and $ \psi_R $ are traditionally written on the right,
+	and their hermitean conjugates --- on the left.
+	So it is only straightforward for us to apply operator $ \p_{\psi_L}^\dag $
+	from \eqref{spinor-der-dag} on the left.
+	By construction, operators in \eqref{spinor-der-dag} erase the fermions directly neighboring them,
+\begin{equation}
+	i\md\,\psi_L  ~~-~~  m\,\psi_R\,\jj  ~~=~~  0\,.
+\end{equation}
 
 
 
