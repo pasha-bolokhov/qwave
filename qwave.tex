@@ -1796,7 +1796,8 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \label{spinor-der}
 	\p_{\psi_R}	& ~~=~~		\frac 1 2\, P_R\, \wt\p\,.
 \end{align}
-	where $ \wt\p $ is defined as that for regular quaternions
+	where $ \wt\p $ is the derivative \eqref{der-cquat} with respect
+	to the components \eqref{psiD-as-quat} of $ \psi_D $ viewed as a complex quaternion,
 \begin{equation}
 	\wt\p	~~=~~	\p_t  ~~-~~  \ii\,\p_x  ~~-~~  \jj\,\p_y  ~~-~~  \kk\,\p_z\,.
 \end{equation}
@@ -1834,11 +1835,17 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	\p_{\psi_R^\dag}	& ~~=~~		\frac 1 2\, \p^*\, P_R\,.
 \end{align}
 	We stress again that here the derivatives act to the \emph{right}.
+	Here $ \p^* $ is the derivative with respect to the complex conjugates of the
+	components \eqref{psiD-as-quat} of $ \psi_D $ viewed as a complex quaternion,
+\begin{equation}
+	\p^*	~~=~~	\p_{t^*}  ~~-~~  \ii\,\p_{x^*}  ~~-~~  \jj\,\p_{y^*}  ~~-~~  \kk\,\p_{z^*}\,.
+\end{equation}
 
 	Equations \eqref{spinor-der} and \eqref{spinor-der-dag} is our final answer
 	for the spinor derivatives.
 	The reason is that we already now how to apply a differential operator $ \p $
-	or its conjugates in an efficient way.
+	or its conjugates in an efficient way --- we have equations \eqref{dq} and \eqref{daq}
+	at our disposal.
 
 	If an expression is linear, say in $ \psi_L $, then differentiation
 	simply ``erases'' the latter from the expression
@@ -1895,7 +1902,15 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	and their hermitean conjugates --- on the left.
 	So it is only straightforward for us to apply operator $ \p_{\psi_L}^\dag $
 	from \eqref{spinor-der-dag} on the left.
-	By construction, operators in \eqref{spinor-der-dag} erase the fermions directly neighboring them,
+	By construction, operators in \eqref{spinor-der-dag} erase the fermions directly neighboring them.
+	The first kinetic term gives us $ i\md\,\psi_L $.
+	What about $ \wt\psi{}_L\, i\md^*\, \psi_L^* $ ?
+	Equation \eqref{diff-psiLR-dag} seems to imply that the derivative of $ \psi_L^* $
+	with respect to $ \psi_L^\dag $ maybe non-zero.
+	While this is actually true, the kinetic term for $ \psi_L^* $ simply gets filtered out by
+	the projector $ P_L $ from \eqref{spinor-der-dag}.
+	The same happens to the mass term containing $ \psi_L^* $,
+	so that only the first mass term contributes, and we arrive to,
 \begin{equation}
 	i\md\,\psi_L  ~~-~~  m\,\psi_R\,\jj  ~~=~~  0\,.
 \end{equation}
