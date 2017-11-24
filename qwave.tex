@@ -1835,11 +1835,17 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	\p_{\psi_R^\dag}	& ~~=~~		\frac 1 2\, \p^*\, P_R\,.
 \end{align}
 	We stress again that here the derivatives act to the \emph{right}.
-	Here $ \p^* $ is the derivative with respect to the complex conjugates of the
-	components \eqref{psiD-as-quat} of $ \psi_D $ viewed as a complex quaternion,
-\begin{equation}
-	\p^*	~~=~~	\p_{t^*}  ~~-~~  \ii\,\p_{x^*}  ~~-~~  \jj\,\p_{y^*}  ~~-~~  \kk\,\p_{z^*}\,.
-\end{equation}
+	Operator $ \p^* $ is the derivative with respect to the complex conjugates of the
+	components \eqref{psiD-as-quat} of $ \psi_D $,
+	the latter viewed as a complex quaternion,
+\begin{align}
+%
+\notag
+	\p^*		& ~~=~~	 \p_{t^*}  ~~-~~  \ii\,\p_{x^*}  ~~-~~  \jj\,\p_{y^*}  ~~-~~  \kk\,\p_{z^*}\,,
+	\\[3mm]
+%
+	\psi_D^*	& ~~=~~  t^*  ~~+~~  \ii\,x^*  ~~+~~  \jj\,y^*  ~~+~~  \kk\,z^*\,.
+\end{align}
 
 	Equations \eqref{spinor-der} and \eqref{spinor-der-dag} is our final answer
 	for the spinor derivatives.
@@ -1912,9 +1918,54 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	The same happens to the mass term containing $ \psi_L^* $,
 	so that only the first mass term contributes, and we arrive to,
 \begin{equation}
-	i\md\,\psi_L  ~~-~~  m\,\psi_R\,\jj  ~~=~~  0\,.
+\label{left-dirac}
+	i\md\,\psi_L  ~~-~~  m\,\psi_R\,\jj	~~=~~	0\,.
 \end{equation}
 
+	Analogously, the derivative with respect to $ \psi_R^\dag $ of right-handed kinetic terms
+	is $ i\,\wt\md\,\psi_R $.
+	As for the mass term, one can proceed with it in two ways.
+	First, perhaps the easiest, is to rewrite it in the form identical to that of the
+	left-handed mass term.
+	That is, the last bracket in Eq.~\eqref{L-dirac-expanded} is the ``zeroth'' quaternionic component
+	of $ \jj\, \psi_R^\dag\, \psi_L $, and as such, is invariant to cyclic permutations 
+	of this term.
+	Using this cyclic symmetry we can pull $ \psi_R^\dag $ to the left,
+\begin{equation}
+	m \lgr \wt\psi{}_L\, \psi_R^*\, \jj  ~~+~~ \jj\, \psi_R^\dag\, \psi_L \rgr
+	~~=~~
+	m \lgr \psi_R^\dag\, \psi_L\, \jj  ~~+~~  \jj\, \wt\psi{}_L\, \psi_R^* \rgr.
+\end{equation}
+	The problem of differentiating with respect to $ \psi_R^\dag $ becomes trivial
+	for the first term in the bracket, giving us $ m\, \psi_L\, \jj $.
+	The second mass term again gets projected out.
+	Altogether, we have
+\begin{equation}
+\label{right-dirac}
+	i\,\wt\md\,\psi_R  ~~+~~  m\, \psi_L\, \jj	~~=~~	0\,.
+\end{equation}
+	
+	We have mentioned here that the derivative $ \p_{\psi_L^\dag}\, \psi_L^* $
+	(along with the corresponding right-handed one) is non-zero.
+	What is it then?
+	Let us see,
+\begin{equation}
+	\p_{\psi_L^\dag}\, \psi_L^*		~~=~~
+	\p_{\psi_L^\dag}\, (\psi_D\,P_L)^*		~~=~~
+	\p_{\psi_L^\dag}\, \psi_D^*\,P_R		~~=~~
+	\frac 1 2\, \p^*\, P_L\, \psi_D^*\,P_R\,.
+\end{equation}
+	Using the first identity in \eqref{daq} 
+	(for, $ \p^* $ for $ \psi_D^* $ plays the same r\^ole as $ \p $ does for $ q $),
+	we find,
+\begin{equation}
+	\p_{\psi_L^\dag}\, \psi_L^*	~~=~~	-\, \wt P{}_L\, P_R	~~=~~	-P_R\,.
+\end{equation}
+	It is because of the other factors containing projectors that
+	this derivative did not contribute to the equation of motion 
+	\eqref{left-dirac}
+	(and, correspondingly, the analogous right-handed derivative
+	did not contribute to Eq.~\eqref{right-dirac}).
 
 
 
