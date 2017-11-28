@@ -558,7 +558,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 
 	Finally, we introduce spinors.
 	Here we give a very brief overview of spinors necessary for Section~\ref{section-dirac}, while
-	a more detailed discussion is postponed until Section~\ref{section-spinors}.
+	a more detailed discussion is postponed until Appendix~\ref{section-spinors}.
 	We begin with stating that the space of complex quaternions can be split in two halves in a yet another way,
 	namely using chirality projectors, $ P_L $ and $ P_R $.
 	A \emph{left-handed} spinor is defined as an arbitrary complex quaternion multiplied by 
@@ -574,7 +574,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \[
 	P_L^2	~~=~~	P_L\,.
 \]
-	All accompanying details of these definitions can be found in Section~\ref{section-spinors}.
+	All accompanying details of these definitions can be found in Appendix~\ref{section-spinors}.
 	For an ordinary reader $ \psi_L $ should be precisely viewed as a left-handed
 	chiral spinor.
 	A convenient basis for $ \psi_L $ is formed by elements $ P_L $ and $ \jj\,P_L $,
@@ -826,7 +826,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	m \lgr \jj\, \psi_L^\dag\, \psi_R  ~+~  \wt\psi{}_R\, \psi_L^*\, \jj \rgr
 	~~+~~  \text{c.c.}
 \end{equation}
-	We will discuss the occurrence of $ \jj $ in this expression in detail in Section~\ref{section-spinors}.
+	We will discuss the occurrence of $ \jj $ in this expression in detail in Appendix~\ref{section-spinors}.
 	Its appearance seems ugly, and we will be able to get rid of it soon, after we discover its meaning.
 	For now we just note that without it the expression would vanish, \emph{i.e.} $ \psi_L^\dag\, \psi_R $
 	has no real part.
@@ -848,7 +848,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	From this follows the cyclicity.
 	The fact that we are dealing with complexified quaternions cannot change this property.
 
-	As we will see in Section~\ref{section-spinors}, in the product $ \psi_R\, \jj $ the factor $ \jj $
+	As we will see in Appendix~\ref{section-spinors}, in the product $ \psi_R\, \jj $ the factor $ \jj $
 	``elevates'' the right-handed spinor $ \psi_R $ to the left-handed space
 	(we have used the term ``elevates'' because conventionally a left-handed spinor is
 	written above right-handed spinor inside the column of a Dirac spinor).
@@ -887,7 +887,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	$ \psi_L^\dag $ and $ \psi_R^\dag $.
 	The reader may wonder at this point -- how are we going to differentiate this Lagrangian with respect
 	to quaternions, let alone complexified and fermionic?
-	We postpone the formal answer to this question until Section~\ref{section-diff}.
+	We postpone the formal answer to this question until Appendix~\ref{section-diff}.
 	For now, we can just act intuitively, at least when differentiating with respect to $ \psi_L^\dag $.
 	Indeed, in the terms where it is present in Eq.~\eqref{L-massive}, it is sitting on the left,
 	and so the left derivative gives
@@ -899,7 +899,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	for which $ \partial \ov z / \partial z ~=~ 0 $.
 	So it seems like there should be more terms on the left-hand side of Eq.~\eqref{ldirac}.
 	Why we can act so naively, and why the other terms do not contribute is, again,
-	explained in Section~\ref{section-diff}.
+	explained in Appendix~\ref{section-diff}.
 	Here we provide an alternative and a more transparent justification, as follows.
 	Let us for a moment pretend that we are dealing with a ``quaternionic'' Lagrangian
 \begin{equation}
@@ -915,7 +915,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	\ml_\text{Dirac}		~~\supset~~
 			\lgr m\, \psi_R^\dag\, \psi_L\, \jj  ~~+~~  \text{q.c.} \rgr  ~~+~~  \text{c.c.}
 \end{equation}
-	We did not make anything up here, as the first term here
+	We did not introduce anything new here, as the first term here
 	was just hidden inside the ``$ \text{q.c.} $'' and ``$ \text{c.c.} $'' in Eq.~\eqref{L-massive}.
 	Notice that this term enters with a \emph{positive} sign.
 
@@ -973,7 +973,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \end{align}
 	The two equations are consistent.
 	What does the equality $ \psi_L ~=~ \psi_R\,\jj $ mean?
-	As we already mentioned, and as we shall see in Section~\ref{section-spinors},
+	As we already mentioned, and as we shall see in Appendix~\ref{section-spinors},
 	multiplying by $ \jj $ on the right
 	\emph{rotates} the components of $ \psi_L $ and $ \psi_R $ into
 	each other.
@@ -1020,8 +1020,9 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	\psi_+		~~\equiv~~	\zeta	~~=~~	\frac{\psi_L \,+\, \psi_R \jj}{\sqrt{2}}\,,
 	&&
 	\psi_-		~~\equiv~~	\eta	~~=~~	\frac{\psi_L \,-\, \psi_R \jj}{\sqrt{2}}\,.
+\label{standard}
 \end{align}
-	As discussed in Section~\ref{section-spinors}, these are precisely the upper
+	As discussed in Appendix~\ref{section-spinors}, these are precisely the upper
 	and lower components of a Dirac spinor in the standard representation:
 \begin{equation}
 	\psi_\text{standard}	~~=~~	
@@ -1152,10 +1153,77 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	The expression for the current can be read off the Lagrangian.
 	Indeed, the current by definition is whatever the gauge field couples to,
 \begin{equation}
+\label{L-current}
 	\cell	~~\supset~~	j_\mu\, A^\mu	
 		~~=~~	\frac{j\,\wt A ~+~ A\,\wt j } 2
 		~~=~~	\frac{\wt A\, j  ~+~  \wt j\, A} 2\,.
 \end{equation}
+	We can differentiate (\emph{i.e.} vary) the latter quaternionic expression using equations
+	\eqref{dq-vector} and \eqref{daq-vector}.
+	The last fraction in Eq.~\eqref{L-current} suggests differentiating with respect to $ \wt A $ in order
+	to get current $ j $,
+\begin{equation}
+	\p_{\wt A}\, \cell	~~\supset~~	\frac { 4\,j ~+~ (-2\,\wt{\wt j}) } 2
+	~~=~~
+	j\,.
+\end{equation}
+	We could now apply the same variational derivative to Lagrangian \eqref{L-massive}.
+	Only this is not necessary --- it is enough to re-write the interacting part of
+	\eqref{L-massive} in the form \eqref{L-current} using the cyclicity property,
+\begin{align}
+%
+\notag
+	\cell	& ~~\supset~~	\psi_L^\dag\, \wt A\, \psi_L  ~~+~~  \psi_R^\dag\, A\, \psi_R  ~~+~~
+				\wt{\psi}{}_L\, A\, \psi_L^*  ~~-~~  \wt{\psi}{}_R\, \wt A\, \psi_R^*
+	\\[3mm]
+%
+	& ~~=~~
+	-\, \wt A\, \psi_L\,\psi_L^\dag  ~~+~~ \wt A\, \psi_R^*\,\wt{\psi}{}_R  ~~+~~  \text{q.c.},
+\end{align}
+	from which we conclude that
+\begin{equation}
+\label{current}
+	j	~~=~~	-\,2 \lgr \psi_L\,\psi_L^\dag  ~-~  \psi_R^*\,\wt\psi{}_R \rgr.
+\end{equation}
+	We immediately observe that this expression transforms correctly under gauge transformations,
+\begin{equation}
+	j	~~\rightarrow~~	e^{i\varphi}\,j\,e^{-i\varphi}	~~=~~	j\,,
+\end{equation}
+	and under Lorentz transformations,
+\begin{equation}
+	j	~~\rightarrow~~	e^\Lambda\,j\,e^{\Lambda^\dag}\,.
+\end{equation}
+	Written explicitly in components, expression \eqref{current} gives,
+\begin{align}
+%
+\notag
+	j	&  ~~=~~			\big(\, \xi_L^*\,\xi_L ~+~ \chi_L^*\,\chi_L \,\big)  ~~+~~  
+						\big(\, \xi_R^*\,\xi_R ~+~ \chi_R^*\,\chi_R \,\big)  ~~+~~
+	\\[2mm]
+%
+\notag
+		& ~~+~~		i\ii \lgr	\big(\, \xi_L^*\,\chi_L \,+\, \chi_L^*\,\xi_L \,\big) ~-~
+						\big(\, \xi_R^*\,\chi_R \,+\, \chi_R^*\,\xi_R \,\big) \rgr
+	\\[2mm]
+%
+		& ~~+~~		i\jj \lgr	i\,\big(\, \chi_L^*\,\xi_L \,-\, \xi_L^*\,\chi_L \,\big) ~-~
+						i\,\big(\, \chi_R^*\,\xi_R \,-\, \xi_R^*\,\chi_R \,\big) \rgr
+	\\[2mm]
+%
+		& ~~+~~		i\kk \lgr	\big(\, \xi_L^*\,\xi_L \,-\, \chi_L^*\,\chi_L \,\big) ~-~
+						\big(\, \xi_R^*\,\xi_R \,-\, \chi_R^*\,\chi_R \,\big) \rgr,
+\notag
+\end{align}
+	as it should be for the current written in the spinor representation.
+
+	Finally, we can re-write current \eqref{current} using the standard representation \eqref{standard},
+\begin{equation}
+	j	~~=~~	-\, \lgr \zeta\,\zeta^\dag ~+~ \eta\,\eta^\dag ~+~ \text{c.c} \rgr  ~~-~~  
+			\lgr \zeta\,\eta^\dag ~+~ \eta\,\zeta^\dag ~-~ \text{c.c} \rgr.
+\end{equation}
+	Here the first bracket gives the real part --- the $ j^0 $ component, while the second bracket gives
+	the (imaginary) vector part.
+
 
 
 
@@ -1415,6 +1483,8 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \item	Parity
 
 \item	Cl(2) $ \otimes $ Cl(2)
+
+\item	Standard Representation
 
 \end{itemize}
 
@@ -1915,9 +1985,9 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	Fermionic expressions are almost always linear in spinors ($ \psi_L^\dag $ or
 	$ \psi_L^* $ is an independent variable from $ \psi_L $),
 	except for four-fermion interactions.
-	Even then, Section~\ref{sec-ordinary-quat} explains how to deal with such functions.
+	Even then, Appendix~\ref{sec-ordinary-quat} explains how to deal with such functions.
 
-	As was shown in Section~\ref{sec-ordinary-quat}, an extremum of a real function
+	As was shown in Appendix~\ref{sec-ordinary-quat}, an extremum of a real function
 	is attained when
 \begin{equation}
 \label{extremum-eq}
