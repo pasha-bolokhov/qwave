@@ -1149,6 +1149,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 %                                                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Current}
+\label{sec-current}
 
 	The expression for the current can be read off the Lagrangian.
 	Indeed, the current by definition is whatever the gauge field couples to,
@@ -1223,6 +1224,82 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \end{equation}
 	Here the first bracket gives the real part --- the $ j^0 $ component, while the second bracket gives
 	the (imaginary) vector part.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                      M A X W E L L ' S   E Q U A T I O N                     %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Maxwell's equation}
+	Although not the main subject of our discussion, we can add the kinetic term for the gauge field,
+	and derive the resulting Maxwell's equation.
+	This section mainly serves the purpose to be an exercise in differentiating.
+	One has to be particularly careful about the targets of differentiation of various involved derivatives.
+
+	Gauge field strength is easily found to be
+\begin{equation}
+	\Phi	~~=~~	\vec B ~~+~~ i\,\vec E	~~=~~	-\, \frac{\p\,A \,-\, \wt A\,\wt\p} 2\,.
+\end{equation}
+	This expression becomes particularly simple in the Lorentz gauge:
+\begin{equation}
+	\Phi_\text{Lorentz}	~~=~~ -\, \p\, A\,,
+\end{equation}
+	although we will not use it for deriving the equations of motion.
+
+	The relevant part of the Lagrangian looks as,
+\begin{equation}
+	\cell_\text{Maxwell}	~~=~~	\frac{ \frac 1 2\, \Phi^2 ~+~ \wt A\,j } 4  ~~+~~  \text{q.c.}  ~~+~~  \text{c.c.}
+\end{equation}
+	As we know from Section~\ref{sec-current}, varying the current part of the Lagrangian with respect to $ \wt A $
+	expectedly gives us the current,
+\begin{equation}
+	\p_{\wt A}\,\cell_\text{current}	~~=~~	\p_{\wt A}\, \frac{\wt A\,j \,+\, \wt j\, A} 2	~~=~~	j\,.
+\end{equation}
+	Now we need to vary the gauge part of the Lagrangian,
+\begin{equation}
+	\cell_\text{gauge}	~~=~~	\frac 1 4\, \Phi^2  ~~+~~  \text{c.c.}
+\end{equation}
+	
+	Explicitly,
+\begin{align}
+%
+\notag
+	& \p_{\wt A}\, (\p\, A ~-~ \wt A\,\wt \p)\, (\p\, A ~-~ \wt A\,\wt \p)	~~=~~
+	\\[3mm]
+%
+	& \underline\p{}_{\wt A}\, (\p\, \underline A ~-~ \wt{\underline A}\,\wt \p)\, (\p\, A ~-~ \wt A\,\wt \p)
+	~~+~~
+	\underline\p{}_{\wt A}\, (\p\, A ~-~ \wt A\,\wt \p)\, (\p\, \underline A ~-~ \wt{\underline A}\,\wt \p)\,.
+\end{align}
+	In the latter expression, we have underlined the particular instances of field $ A $ which are acted
+	upon by $ \p_{\wt A} $.
+	All other occurrences of $ A $ are considered constant for the matter of variation.
+	The space-time derivatives $ \p $ here act on the factors of $ A $ that are closest to them.
+	We need to free the underlined variables $ A $ from the space-time derivatives, by integrating the latter
+	by parts.
+	This will change the sign in front of each of these derivatives, but will not move them anywhere
+	because they are quaternionic.
+	To indicate that they are now acting on different targets, we will doubly underline them.
+
+	
+	For the sake of variation, however, these derivatives are now just constants.
+
+
+
+	Although a fair exercise in differentiation, the derivative with respect to the conjugate will actually
+	give the same contribution.
+	The reason we can guess that is that these two terms only differ by their complex-imaginary part
+\begin{equation}
+	\text{Im}~\Phi^2	~~\propto~~	\vec E \circ \vec B\,,
+\end{equation}
+	which is a boundary term and does not affect the equations of motion.
+
+
 
 
 
