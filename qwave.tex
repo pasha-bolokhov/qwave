@@ -11,7 +11,7 @@
 \usepackage{color}
 \usepackage{bm}
 \usepackage{slashed}
-\usepackage{ulem}
+%\usepackage{ulem}
 \usepackage{showlabels}
 
 
@@ -224,6 +224,8 @@
 % Make the bullet list symbol a small dot
 \renewcommand{\labelitemi}{{\Large$\cdot$}}
 
+\def\uline#1{\underline{#1}}
+\def\uuline#1{\underline{\underline{#1}}}
 
 \begin{document}
 
@@ -1285,30 +1287,63 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	by parts.
 	This will change the sign in front of each of these derivatives, but will not move them anywhere
 	because they are quaternionic.
-	To indicate that they are now acting on different targets, we will doubly underline them.
+	To indicate that they are now acting on different targets, we will doubly underline them,
+	as well as their targets,
 \begin{equation}
+\label{by-parts}
 	\uline\p{}_{\wt A}\,	\big(\, -\,\uuline\p\,\uline A ~+~ \wt{\uline A}\,\uuline\p \,\big)
-				\big(\, \uuline{\p\, A ~-~ \wt A\,\wt \p} \,\big)
+				\big(\, \uuline{~~~~\dots~~~~} \,)
 	~~+~~
-	\uline\p{}_{\wt A}\,	\big(\, \uuline{\p\, A ~-~ \wt A\,\wt \p} \,\big)
-				\big(\, -\,\uuline\p\,\uline A ~+~ \wt{\uline A}\,\uuline\p \,\big)
+	\uline\p{}_{\wt A}\,	\big(\, \uuline{~~~~\dots~~~~} \,)
+				\big(\, -\,\uuline\p\,\uline A ~+~ \wt{\uline A}\,\uuline\p \,\big)\,.
 \end{equation}
-	For the sake of variation, however, these derivatives are now just constants.
-	In fact, everything is constant in regards to varying with respect to $ A $, except for the underlined $ A $ factors.
-	
+	Here the dots symbolize the term
+\begin{equation}
+\label{dots-term}
+	\p\,A  ~~-~~  \wt A\,\wt\p\,.
+\end{equation}
+	For the sake of variation, the space-time derivatives are now just constants.
+	In fact, everything is constant in Eq.~\eqref{by-parts} in regards to varying with respect to $ A $ ---
+	except for the underlined $ A $ factors.
+	Applying identities \eqref{dq-vector} and \eqref{daq-vector}, we get, explicitly
+\begin{equation}
+\label{varied}
+	2\,\wt\p\, \big(\, \uuline{~~~\dots~~~} \,)  ~~+~~
+	4\,\wt\p\, \big(\, \uuline{~~~\dots~~~} \,)  ~~+~~
+	2\,\wt\p\, \big(\, \uuline{~~~\dots~~~} \,)\wt{~}  ~~+~~
+	4\, \big(\, \uuline{~~~\dots~~~} \,)_0\,\wt\p\,.
+\end{equation}
+	The third term here involves the quaternionic conjugate of \eqref{dots-term},
+	while the last term involves the real component of the \eqref{dots-term}.
+	Since \eqref{dots-term} is purely imaginary, applying quaternionic conjugation just changes its sign,
+	while taking the real part annihilates it,
+\begin{equation}
+	4\,\wt\p\,\big(\, \p\,A ~-~ \wt A\,\wt\p \,\big)	~~=~~	-\,8\,\wt\p\,\Phi\,.
+\end{equation}
 
 
-
-	Although a fair exercise in differentiation, the derivative with respect to the conjugate will actually
-	give the same contribution.
-	The reason we can guess that is that these two terms only differ by their complex-imaginary part
+	Although a fair exercise in differentiation, the derivative of the conjugate term $ \ov\Phi{}^2 $
+	will actually give the same contribution.
+	The reason we can guess that is that the two terms $ \Phi^2 $ and $ \ov\Phi{}^2 $
+	only differ by their complex-imaginary part
 \begin{equation}
 	\text{Im}~\Phi^2	~~\propto~~	\vec E \circ \vec B\,,
 \end{equation}
-	which is a boundary term and does not affect the equations of motion.
+	which is a boundary term and thus does not affect the equations of motion.
 
-
-
+	Altogether, we arrive to,
+\begin{equation}
+	\p_{\wt A}\, \cell_\text{Maxwell}	~~=~~	j  ~~-~~  \wt\p\,\Phi\,,
+\end{equation}
+	or,
+\begin{equation}
+\label{Maxwell}
+	\wt\p\,\Phi	~~=~~	j\,,
+\end{equation}
+	which is the \emph{quaternionic Maxwell's equation}.
+	Notice that, because it is a complex-quaternionic equation, 
+	it includes all eight real Maxwell's equations.
+	The reader is encouraged to check that they are reproduced correctly in Eq.~\eqref{Maxwell}.
 
 
 
