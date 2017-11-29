@@ -11,6 +11,7 @@
 \usepackage{color}
 \usepackage{bm}
 \usepackage{slashed}
+\usepackage{ulem}
 \usepackage{showlabels}
 
 
@@ -1285,9 +1286,16 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	This will change the sign in front of each of these derivatives, but will not move them anywhere
 	because they are quaternionic.
 	To indicate that they are now acting on different targets, we will doubly underline them.
-
-	
+\begin{equation}
+	\uline\p{}_{\wt A}\,	\big(\, -\,\uuline\p\,\uline A ~+~ \wt{\uline A}\,\uuline\p \,\big)
+				\big(\, \uuline{\p\, A ~-~ \wt A\,\wt \p} \,\big)
+	~~+~~
+	\uline\p{}_{\wt A}\,	\big(\, \uuline{\p\, A ~-~ \wt A\,\wt \p} \,\big)
+				\big(\, -\,\uuline\p\,\uline A ~+~ \wt{\uline A}\,\uuline\p \,\big)
+\end{equation}
 	For the sake of variation, however, these derivatives are now just constants.
+	In fact, everything is constant in regards to varying with respect to $ A $, except for the underlined $ A $ factors.
+	
 
 
 
