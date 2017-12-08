@@ -679,15 +679,9 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	is just the reflection of the fact that SU(2) is a double cover of
 	the rotation group SO(3).
 
-\begin{itemize}
+	The action of discrete symmetries on spinors is presented in Appendix~\ref{section-discrete}.
 
-\item 
-	Parity operator acting on spinors is $ 1 | ( - \ii ) $.
-	It sends $ \psi_L $ to $ i\,\psi_R $ and $ \psi_R $ to $ i\,\psi_L $.
-	There are other normalizations for parity of course,
-	this is just one example
 
-\end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -728,17 +722,18 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	&
 	\psi_R		& ~~\to~~	e^{\Lambda^*}\, \psi_R\,.
 \end{align}
-{\boldmath\bf
-	Although both $ \psi_L $ and $ \psi_R $ are parts of a single Dirac spinor
-\begin{equation}
-	\psi_D		~~=~~	\psi_L  ~~+~~  \psi_R\,,
-\end{equation}
-	it does not seem to be possible to combine the two terms in Eq.~\eqref{L-massless}
-	into a single term just using $ \psi_D $,
-	because of the different representations of the derivative $ \partial $
-	---
-	should think about this.
-}
+
+	Lagrangian \eqref{L-massless} is manifestly chiral, in that it consists of two separate
+	terms for the left-handed and right-handed fermions.
+	This might be considered as a disadvantage compared to the usual matrix-based representation,
+	where both the mass term and the kinetic term are united.
+	In quaternionic language, we keep the chiralities in Eq.~\eqref{L-massless} separate here.
+	As we will be dealing with the quantum-mechanics limit, explicit chiral structure is more advantageous
+	in this study.
+	Furthermore, the Standard Model, the way to which this work is meant to direct, is chiral in its nature.
+	It is, however, possible to unite the terms in Eq.~\eqref{L-massless}.
+	Doing so will be useful for promoting the theory to the quantum stage and developing the Feynman rules.
+	This will be the subject of the future work.
 
 	We need to make an important remark about conjugating products of spinors,
 	due to the fact that spinors are Grasmann variables.
@@ -768,7 +763,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	(\xi\, \chi)^\dag	~~=~~	\chi^\dag\, \xi^\dag\,.
 \end{equation}
 
-	Let us discuss gauge transformations now, because we need the electron to interact with the electromagnetic field.
+	Let us discuss gauge transformations now, as we need the electron to interact with the electromagnetic field.
 	Gauge transformations just rotate the overall complex phase of a spinor, and so they are defined
 	similarly both for right- and left-handed spinors,
 \begin{align}
@@ -783,7 +778,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	\wt\psi{}_R		& ~~\to~~		\wt\psi{}_R\,e^{i\varphi}\,.
 \end{align}
 	Although $ e^{i\varphi} $ certainly commutes with $ \wt\psi{}_{L,R} $,
-	for convenience we wrote it on the right of the latter.
+	here for convenience we wrote it on the right of the latter.
 	Both the complex conjugates and hermitean conjugates will have the opposite charge,
 \begin{align}
 %
@@ -820,7 +815,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	This allows $ \md $ to act on $ \psi_L $, so that $ \md\,\psi_L $ is again in the fundamental representation
 	of U(1).
 	Now, although $ \psi_R $ has the same charge as $ \psi_L $, we cannot act on it with the same derivative, because
-	the product $ \md\,\psi_R $ will not transform under Lorentz transformations properly.
+	the product $ \md\,\psi_R $ will not transform under the Lorentz transformations properly.
 	Remind, that the right-handed and left-handed spinor spaces are in fact related by complex conjugation.
 	This was the reason that we wrote $ \partial^* $ in the Lagrangian in Eq.~\eqref{L-massless}.
 	One would think that by analogy we should act on $ \psi_R $ with $ \md^* $ --- but that would also be
@@ -842,14 +837,16 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 
 	Now we add the mass term.
 	Since this has to be the Dirac mass, it has to flip chirality.
-	The only form that correctly reproduces the mass term is $ m\, \jj\, \psi_L^\dag\, \psi_R $,
+	The only form that correctly reproduces the mass term has the form $ m\, \jj\, \psi_L^\dag\, \psi_R $,
 \begin{equation}
 	m\, \jj\, \psi_L^\dag\, \psi_R  ~~+~~  \text{q.c.}  ~~+~~  \text{c.c}  ~~=~~
 	m \lgr \jj\, \psi_L^\dag\, \psi_R  ~+~  \wt\psi{}_R\, \psi_L^*\, \jj \rgr
 	~~+~~  \text{c.c.}
 \end{equation}
+	Here the signs q.c. and c.c. imply adding the appropriate conjugate of everything
+	that resides to the left of the respective sign.
 	We will discuss the occurrence of $ \jj $ in this expression in detail in Appendix~\ref{section-spinors}.
-	Its appearance seems ugly, and we will be able to get rid of it soon, after we discover its meaning.
+	This form of the mass term seems awkward, and we will be able to get rid of it soon, after we discover its meaning.
 	For now we just note that without it the expression would vanish, \emph{i.e.} $ \psi_L^\dag\, \psi_R $
 	has no real part.
 	Let us also note that this factor of $ \jj $ can be moved to the right at our conveniece:
@@ -886,6 +883,14 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \end{equation}
 	as it should be for the Dirac mass term.
 
+	We also mention here the mass term \eqref{m-term} can be written in an alternative form by
+	replacing $ \jj $ with $ i\ii $,
+\begin{equation}
+\label{m-term-alt}
+	i\ii\, m\, \psi_L^\dag\, \psi_R  ~~+~~  \text{q.c.}  ~~+~~  \text{c.c.}
+\end{equation}
+	Which form to use is a matter of convenience.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                              %
@@ -912,7 +917,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	We postpone the formal answer to this question until Appendix~\ref{section-diff}.
 	For now, we can just act intuitively, at least when differentiating with respect to $ \psi_L^\dag $.
 	Indeed, in the terms where it is present in Eq.~\eqref{L-massive}, it is sitting on the left,
-	and so the left derivative gives
+	and so the na\"ive left derivative gives
 \begin{equation}
 \label{ldirac}
 	i\,\md\,\psi_L  ~~-~~  m\, \psi_R\, \jj	~~=~~	0\,.
@@ -920,7 +925,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	Loosely speaking, for quaternions $ \partial \wt q/\partial q ~\neq~ 0 $ --- unlike for complex numbers,
 	for which $ \partial \ov z / \partial z ~=~ 0 $.
 	So it seems like there should be more terms on the left-hand side of Eq.~\eqref{ldirac}.
-	Why we can act so naively, and why the other terms do not contribute is, again,
+	Why we can act so na\"ively, and why the other terms do not contribute is, again,
 	explained in Appendix~\ref{section-diff}.
 	Here we provide an alternative and a more transparent justification, as follows.
 	Let us for a moment pretend that we are dealing with a ``quaternionic'' Lagrangian
@@ -1125,6 +1130,8 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	because the $ \sigma $-matrices are hermitean, and the quaternionic units are not.
 	Second (and actually the same), by multiplying the magnetic field $ \vec B $,
 	it turns it from an axial vector into a polar vector $ i\,\vec B $.
+	In the regular spinor formalism, one yet has to argue that the product $ (\vec\sigma \circ \vec B) $
+	yields a true scalar when acting on $ \psi $.
 
 	It is precisely the form of equation \eqref{pauli} that establishes both the quaternionic form
 	of the Schr\"odinger equation
@@ -1644,6 +1651,18 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 %                                                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Discrete symmetries}
+\label{section-discrete}
+
+
+\begin{itemize}
+
+\item 
+	Parity operator acting on spinors is $ 1 | ( - \ii ) $.
+	It sends $ \psi_L $ to $ i\,\psi_R $ and $ \psi_R $ to $ i\,\psi_L $.
+	There are other normalizations for parity of course,
+	this is just one example
+
+\end{itemize}
 
 
 
