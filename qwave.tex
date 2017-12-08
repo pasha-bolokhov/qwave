@@ -220,6 +220,9 @@
 \newcommand{\jj}{\hat\jmath}
 \newcommand{\kk}{\hat k}
 
+\newcommand{\cc}{\mathcal{C}}
+\newcommand{\ch}{\mathcal{H}}
+
 
 % Make the bullet list symbol a small dot
 \renewcommand{\labelitemi}{{\Large$\cdot$}}
@@ -273,14 +276,21 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \end{center}
 
 \hspace{0.3cm}
-	We argue that quaternions form a natural language for description of the wavefunction.
-	In this paper, we tap into the Dirac equation and the Schr\"odinger equation, all
-	formulated in quaternionic language.
-	We do not exhibit any unknown or unphysical features, as mostly was done previously.
-	Instead, we demonstrate the transparency of the known features and details of the Dirac equation,
-	and derive the Schr\"odinger equation as its non-relativistic limit. 
+	We argue that quaternions form a natural language for the description of quantum-mechanical wavefunctions.
+	We use the quaternionic spinor formalism which is in one-to-one correspondence with the usual
+	spinor language.
+	No unphysical degrees of freedom are admitted, in contrast to the majority of literature on quaternions.
+	In this paper we first build a Dirac Lagrangian in quaternionic language,
+	derive the Dirac equation and take the non-relativistic limit to find the Schr\"odinger's equation.
+	We show that the quaternionic formalism is a natural choice to start with,
+	while in the transition to the non-interacting non-relativistic limit the quaternionic description 
+	effectively reduces to the regular complex wavefunction language.
 	We provide an easy to use grammar for switching between the ordinary spinor language
 	and the description in terms of quaternions.
+	As an illustration of the broader range of the formalism,
+	we also derive the Maxwell's equation from the quaternionic Lagrangian of Quantum Electrodynamics.
+	In order to deal with the equations of motion, we develop the variational calculus
+	appropriate for this formalism.
 \vspace{2cm}
 
 
@@ -300,24 +310,24 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \setcounter{equation}{0}
 
 	The list of literature on the r\^ole of quaternions in physics is so vast that it is hardly
-	possible to oversee it \cite{}.
+	possible to enlist it \cite{}.
 	The majority of the literature touches base on the use of quaternions in three-dimensional
 	rotations and Lorentz transformations.
-	Other papers include their applications in Electrodynamics and Quantum Mechanics.
+	Other works include their applications in Electrodynamics and Quantum Mechanics.
 	The attractive feature of quaternions is that whenever a solution is possible in the quaternionic form,
 	it is much more compact than that in the customary form of Lorentz vectors and tensors. 
 
-	For the majority of theorists, however, quaternions are seen as a somewhat exotic subject matter,
-	which neither has proven to be exceedingly effective to be adopted permanently, nor has lead
-	to any new phenomena or even a new formalism.
+	For the majority of theorists, however, quaternions are seen as a somewhat exotic subject,
+	which neither has proven to be exceedingly effective, nor has lead
+	to any new insights or new formalisms.
 
 	The other drawback, as it is perceived, is a somewhat ``strange'' mathematical language,
-        often accompanied by strange results following from this language.
+        often accompanied by strange results following from it.
 	While from learning Quantum Mechanics and Gauge Theories we are used to non-commutative operators,
 	and non-commutative objects in general, when we see an operator of multiplication ``from the right'' $ |\, \ii $
         (an example of the so-called ``barred'' operators) it immediately induces a certain degree of skepsis.
 	That is, mathematically this formalism may be interesting, but physically this seems to be
-	driven away from reality and therefore unnecessary.
+	driven away from reality and therefore deemed unnecessary.
 	Furthermore, some treatments on quaternions in Quantum Mechanics predict extra degrees of freedom for fermions,
 	which we obviously do not observe.
 	This is the result of the fact that quaternions are multi-component numbers,
@@ -325,7 +335,16 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
         These aspects of using quaternions in theoretical physics are enough to discourage the interest in the
         majority of theorists.
 
-	Our goal is to cast a bridge from the regular algebraic language of physics (which is, dominantly based
+	Recently, as series of works have been published which have developed a formalism for constructing
+	the quaternionic analogues of spinors, based on the determination of the so-called
+	maximally totally isotropic subspaces which project the desired minimal ideals from the
+	complex quaternionic algebra $ \cc \otimes \ch $.
+	This construction has a direct physical interpretation in terms of chirality of spinors,
+	which we actively exploit in this paper.
+	This way we are able to ensure that the content of the theory we are writing does not
+	include any exotic or non-observed degrees of freedom.
+
+	Our main goal is to cast a bridge from the regular algebraic language of physics (which is, dominantly based
 	on complex numbers) to the language of quaternions.
 	We argue that quaternions have always been around, and we just neglected to acknowledge them.
 	There is no need or necessity for any new degrees of freedom or new physics to arise.
