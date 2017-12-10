@@ -1654,16 +1654,47 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \subsection{Discrete symmetries}
 \label{section-discrete}
 
+	Here we will discuss the action of $ C $, $ P $ and $ T $ symmetries on fermions.
+	These symmetries can be given for an entire Dirac fermion $ \psi_D $.
+	We use here the phase conventions of [\emph{BLP}].
 
 \begin{itemize}
 
-\item 
-	Parity operator acting on spinors is $ 1 | ( - \ii ) $.
-	It sends $ \psi_L $ to $ i\,\psi_R $ and $ \psi_R $ to $ i\,\psi_L $.
-	There are other normalizations for parity of course,
-	this is just one example
+\item
+	Charge conjugation $ C $ is realized by complex conjugation of the fermion,
+\begin{equation}
+	\psi_D(x)	~~\to~~		i\,\psi_D^*(x)\,.
+\end{equation}
+
+\item
+	Parity transformation $ P $ is given by right multiplication by $ -\ii $,
+\begin{equation}
+	\psi_D(t,\, \vec x)	~~\to~~		-\,\psi_D(t,\, -\vec x)\,\ii\,,
+\end{equation}
+	which interchanges the chiral components as,
+\begin{equation}
+	\psi_L	~~\to~~		i\,\psi_R\,,
+	\qquad\qquad
+	\psi_R	~~\to~~		i\,\psi_L\,.
+\end{equation}
+
+\item
+	Time inversion $ T $ is performed by complex conjugation and 
+	multiplying by $ i\jj $ on the right,
+\begin{equation}
+	\psi_D(t,\, \vec x)	~~\to~~		i\,\psi_D^*(-t,\, \vec x)\,\jj\,.
+\end{equation}
 
 \end{itemize}
+
+	All three transformations result in
+\begin{equation}
+	C\,P\,T\, \psi_D(x)	~~=~~		\psi_D(-x)\,\kk\,.
+\end{equation}
+	Right-multiplying by $ i\kk $ keeps the sign of the left-handed spinor,
+	while flips the sign of the right-handed part.
+	Therefore, multiplying by $ \kk ~=~ (-i)i\kk $ corresponds to multiplying
+	by $ i\gamma^5 $ in the spinor representation.
 
 
 
