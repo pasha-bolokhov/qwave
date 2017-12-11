@@ -220,8 +220,10 @@
 \newcommand{\jj}{\hat\jmath}
 \newcommand{\kk}{\hat k}
 
-\newcommand{\cc}{\mathcal{C}}
-\newcommand{\ch}{\mathcal{H}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cO}{\mathcal{O}}
 
 
 % Make the bullet list symbol a small dot
@@ -343,7 +345,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	Recently, as series of works have been published where a formalism has been developed for constructing
 	the quaternionic analogues of spinors, based on the determination of the so-called
 	maximally totally isotropic subspaces which project the desired minimal ideals from the
-	complex quaternionic algebra $ \cc \otimes \ch $.
+	complex quaternionic algebra $ \cC \otimes \cH $.
 	This construction has a direct physical interpretation in terms of chirality of spinors,
 	which we actively exploit in this paper.
 	This way we are able to ensure that the content of the theory we are writing does not
@@ -577,11 +579,11 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	Finally, we introduce spinors.
 	Here we give a very brief overview of spinors necessary for Section~\ref{section-dirac}, while
 	a more detailed discussion is postponed until Appendix~\ref{section-spinors}.
-	We begin with stating that the space of complex quaternions $ \cc \otimes \ch $
+	We begin with stating that the space of complex quaternions $ \cC \otimes \cH $
 	can be split in two halves in a yet another way, namely using chirality projectors, $ P_L $ and $ P_R $.
 	This construction is based on identifying the projectors corresponding to the
 	maximally totally isotropic subspaces of the quaternion algebra [\emph{thesis}].
-	In the case of $ \cc \otimes \ch $ such spaces are one-dimensional each, and are given
+	In the case of $ \cC \otimes \cH $ such spaces are one-dimensional each, and are given
 	by the projectors $ P_L $ and $ P_R $.
 	A \emph{left-handed} spinor is defined as an arbitrary complex quaternion multiplied by 
 	a projector $ P_L $ on the right:
@@ -733,6 +735,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	complex conjugation cannot change their order, because of their quaternionic content.
 	In that case, the order is preserved, but an extra minus sign appears,
 \begin{equation}
+\label{ferm-cc}
 	(\xi\, \chi)^*		~~=~~	-\, \xi^*\, \chi^*\,,\qquad \text{for fermionic complex quaternions.}
 \end{equation}
 	If we take a quaternionic conjugate $ \wt{\xi\, \chi} $, on the other hand, 
@@ -742,12 +745,14 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	But now because the spinors are fermions, and we are \emph{not} performing a
 	complex conjugation, we get an extra minus sign
 \begin{equation}
+\label{ferm-qc}
 	\wt{\xi\, \chi}		~~=~~	-\, \wt\chi\, \wt\xi\,\qquad \text{for quaternionic spinors.}
 \end{equation}
 	The only kind of conjugation which does not produce a negative sign is hermitean
 	conjugation --- this combination changes the order of the spinors in agreement with
 	both complex and quaternionic conjugations,
 \begin{equation}
+\label{ferm-hc}
 	(\xi\, \chi)^\dag	~~=~~	\chi^\dag\, \xi^\dag\,.
 \end{equation}
 
@@ -1385,7 +1390,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 
 
 
-\pagebreak
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                              %
 %                                                                              %
@@ -1394,6 +1399,49 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 %                                                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}
+
+	We have demonstrated the construction of Dirac and Weyl spinors in the complex quaternionic
+	space $ \cC \otimes \cH $.
+	The spinors become part of the algebra, on the same grounds as the kinetic operators acting on them.
+	This allows for finding purely-algebraic solutions of the Dirac equation in various settings,
+	without resorting to the matrix form.
+	Different types of conjugation of spinors \eqref{ferm-cc}, \eqref{ferm-qc} and \eqref{ferm-hc}
+	is what particularly distinguishes the quaternionic formalism from the regular matrix description.
+	For example, the discrete transformations \eqref{C-trans}--\eqref{T-trans} have a simpler
+	appearance.
+	In addition we notice that these complex and quaternionic conjugations are not as easy to implement
+	in the regular spinor formalism.
+
+	After building the Lagrangian, we have been able to develop a scheme of using the variational calculus
+	to consistently derive the equations of motion.
+	This calculus is well applicable to spinors and to vectors, which we have demonstrated by deriving the
+	(single) Maxwell's equation.
+	
+	An important result is the digression of the algebra in the non-relativistic limit.
+	By taking this limit, we have established the form of the Schr\"odinger's equation
+	in the quaternionic formulation.
+	Quantum Mechanics in the quaternionic form has been a subject of long study with various success.
+	We show that it is possible to uniquely fix this form by starting from the Dirac equation.
+	No extra degrees off freedom appear.
+	Furthermore, the existence of the spin of the wavefunction is the natural consequence of the latter
+	being quaternionic.
+	The solution can be sought in the \emph{algebraic} form.
+	Then, by applying the correct projector one finds the quantum-mechanical wavefunction.
+	Such solutions will be the subject of further study.
+	Once the spin is discarded, the Schr\"odinger's equation takes the usual \emph{complex}
+	form.
+	The quaternionic algebra reduces to the complex one in the non-relativistic limit.
+	Extending this hypothesis, we hope to expect that addition of the strong and weak interactions
+	grows the algebra to a unifying $ \cO \otimes \cH \otimes \cC \otimes \cR $.
+
+	In this context, we can address the length of the Lagrangian of electrodynamics \eqref{L-massive}.
+	As we have mentioned, it is possible to write it in a more compact way.
+	There have been multiple reasons we have not done this in this paper.
+	Besides the desired non-relativistic limit, we note that the Standard Model itself treats
+	the chiralities differently.
+	Finally, we believe, that the right answer to a compact form is given by placing the theory
+	into the framework of electroweak interactions.
+	This comprises a promising direction for future work.
 
 
 
@@ -1406,6 +1454,11 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 %                                                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Acknowledgments}
+
+	The author would like to thank Cohl Furey for valuable discussions during various stages
+	of this work,
+	and the Institute of Nuclear Theory at the University of Washington where part of this work
+	was done for kind hospitality.
 
 
 
@@ -1697,12 +1750,14 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \item
 	Charge conjugation $ C $ is realized by complex conjugation of the fermion,
 \begin{equation}
+\label{C-trans}
 	\psi_D(x)	~~\to~~		i\,\psi_D^*(x)\,.
 \end{equation}
 
 \item
 	Parity transformation $ P $ is given by right multiplication by $ -\ii $,
 \begin{equation}
+\label{P-trans}
 	\psi_D(t,\, \vec x)	~~\to~~		-\,\psi_D(t,\, -\vec x)\,\ii\,,
 \end{equation}
 	which interchanges the chiral components as,
@@ -1716,6 +1771,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	Time inversion $ T $ is performed by complex conjugation and 
 	multiplying by $ i\jj $ on the right,
 \begin{equation}
+\label{T-trans}
 	\psi_D(t,\, \vec x)	~~\to~~		i\,\psi_D^*(-t,\, \vec x)\,\jj\,.
 \end{equation}
 
@@ -1723,6 +1779,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 
 	All three transformations result in
 \begin{equation}
+\label{CPT-trans}
 	C\,P\,T\, \psi_D(x)	~~=~~		\psi_D(-x)\,\kk\,.
 \end{equation}
 	Right-multiplying by $ i\kk $ preserves the sign of the left-handed spinor,
