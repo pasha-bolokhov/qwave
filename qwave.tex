@@ -723,18 +723,6 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	\psi_R		& ~~\to~~	e^{\Lambda^*}\, \psi_R\,.
 \end{align}
 
-	Lagrangian \eqref{L-massless} is manifestly chiral, in that it consists of two separate
-	terms for the left-handed and right-handed fermions.
-	This might be considered as a disadvantage compared to the usual matrix-based representation,
-	where both the mass term and the kinetic term are united.
-	In quaternionic language, we keep the chiralities in Eq.~\eqref{L-massless} separate here.
-	As we will be dealing with the quantum-mechanics limit, explicit chiral structure is more advantageous
-	in this study.
-	Furthermore, the Standard Model, the way to which this work is meant to direct, is chiral in its nature.
-	It is, however, possible to unite the terms in Eq.~\eqref{L-massless}.
-	Doing so will be useful for promoting the theory to the quantum stage and developing the Feynman rules.
-	This will be the subject of the future work.
-
 	We need to make an important remark about conjugating products of spinors,
 	due to the fact that spinors are Grasmann variables.
 	By definition, complex conjugation of two Grassman variable interchanges their order,
@@ -762,6 +750,26 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \begin{equation}
 	(\xi\, \chi)^\dag	~~=~~	\chi^\dag\, \xi^\dag\,.
 \end{equation}
+
+	Lagrangian \eqref{L-massless} is manifestly chiral, in that it consists of two separate
+	terms for the left-handed and right-handed fermions.
+	This might be considered as a disadvantage compared to the usual matrix-based representation,
+	where both the mass term and the kinetic term are united.
+	In quaternionic language, we keep the chiralities in Eq.~\eqref{L-massless} separate here.
+	As we will be dealing with the quantum-mechanics limit, explicit chiral structure is more advantageous
+	in this study.
+	Furthermore, the Standard Model, the way to which this work is meant to point, is chiral in its nature.
+	It is, however, possible to unite the terms in Eq.~\eqref{L-massless}.
+	To do that, we need to appeal to the so-called $ m_c $-action [\emph{thesis}] that the derivatives
+	in \eqref{L-massless} implement.
+	In plain terms, the kinetic term involves the projectors acting on the right,
+\begin{equation}
+\label{L-united}
+	\mc L_\text{massless}	~~=~~	\psi_D^\dag\, i\!\lgr \p \,|\, P_L ~+~ \p^* \,|\, P_R \rgr\! \psi_D  ~~+~~  \text{c.c.}
+\end{equation}
+	Expressing the kinetic term in this form will be useful for promoting the theory
+	to the quantum stage and developing the Feynman rules.
+	This will be the subject of future work.
 
 	Let us discuss gauge transformations now, as we need the electron to interact with the electromagnetic field.
 	Gauge transformations just rotate the overall complex phase of a spinor, and so they are defined
@@ -909,6 +917,10 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \end{equation}
 	where we remember that the mass term has to actually enter with a negative sign,
 	and we consider the electromagnetic field to be fixed.
+	Having multiple terms, this Lagrangian can also be compacted into a form similar to \eqref{L-united}.
+	We believe, however, that this should be automatically achieved in the context of the electroweak theory.
+	For our current purposes, once again, it is important to establish the contact with Quantum Mechanics,
+	and we prefer to keep the theory in the chiral form \eqref{L-massive}.
 
 	To derive the equations of motion, we vary the Lagrangian \eqref{L-massive} with respect to
 	$ \psi_L^\dag $ and $ \psi_R^\dag $.
@@ -933,8 +945,8 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \label{L-quat}
 	\psi_L^\dag\, i\md\, \psi_L  ~~+~~  m\, \psi_L^\dag\, \psi_R\, \jj
 \end{equation}
-	of which we will only want its real part.
-	If we find the extremum of this Lagrangian, it will also extremize its real part.
+	from which we will only need the real part.
+	If we find the extremum of this Lagrangian, it will also extremize the real part of the latter.
 	But the extremum of \eqref{L-quat} is exactly given by Eq.~\eqref{ldirac}.
 
 	In order to vary with respect to $ \psi_R^\dag $, we just re-write the mass term as
@@ -945,7 +957,6 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	We did not introduce anything new, as the first term here
 	was just hidden inside the ``$ \text{q.c.} $'' and ``$ \text{c.c.} $'' in Eq.~\eqref{L-massive}.
 	Notice that this term enters with a \emph{positive} sign.
-
 	Now we can vary the Langrangian with respect to $ \psi_R^\dag $, finding
 \begin{equation}
 \label{rdirac}
@@ -1895,7 +1906,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	f(q)		~~=~~	\dots  ~~+~~  q\,a  ~~+~~  \wt a\, \wt q  ~~+~~  \dots\,,
 \end{equation}
 	since when we differentiate a particular factor of $ q $ in a given monomial term,
-	all the other factors of $ q $ in that term can be considered constant and are absorbed into $ a $.
+	all the other factors of $ q $ in that term can be considered constant and absorbed into $ a $.
 	Applying identities \eqref{dq}, \eqref{daq} to function \eqref{f-real}, we get
 \begin{equation}
 \label{der-f}
@@ -1998,7 +2009,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	Vectors open up quite an interesting story, as the only physical vector
 	field variables are gauge fields.
 	Thus, differentiation with respect to vectors enables us to derive
-	and expression for the current, as well as to formally derive the form 
+	an expression for the current, as well as to formally derive the form 
 	of the quaternionic Maxwell's equation.
 
 	Formally vectors can be defined by the constraint condition
@@ -2091,9 +2102,9 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	in terms of the quaternionic components $ t $, $ x $, $ y $ and $ z $.
 	Although we are really considering $ \psi_L $ and $ \psi_R $ separately,
 	let us combine them both into a single Dirac fermion.
-	This is only done for the sake of completeness --- derivative with respect to $ \psi_L $
+	This is only done for the sake of completeness --- a derivative with respect to $ \psi_L $
 	does not touch $ \psi_R $ in any sense, 
-	because their components are independent complex numbers.
+	because the components of the two spinors are independent complex numbers.
 	We have,
 \begin{align}
 %
@@ -2124,7 +2135,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	\p_{\psi_R}	& ~~\propto~~
 	\frac{\p_t ~+~ i\jj\,\p_x ~-~ \jj\,\p_y ~-~ i\,\p_z} 2\,.
 \end{align}
-	Although we could write equality signs in these equations, postpone this
+	Although we could write equality signs in these equations, we postpone this
 	until we do the last extra step.
 	Namely, equations \eqref{prelim-psi-der} do not seem to be very aesthetic,
 	or easy to remember.
@@ -2132,9 +2143,9 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	them by the projectors $ P_L $ and $ P_R $ on the left, correspondingly.
 	Indeed, these projectors will carve out $ \psi_L $ or $ \psi_R $ from Eq.~\eqref{psiD-as-quat},
 	before the actual derivatives will hit them.
-	It is a matter of a simple multiplication to observe that the right-hand
-	sides of Eq.~\eqref{prelim-psi-der} multiplied by the corresponding projectors,
-	match with a regular derivative $ \wt\p $ multiplied by the same projectors
+	It is then a matter of a simple multiplication to observe that the right-hand
+	sides of Eq.~\eqref{prelim-psi-der} when multiplied by the corresponding projectors,
+	match a regular derivative $ \wt\p $ multiplied by the same projectors
 \begin{align}
 %
 \notag
@@ -2250,6 +2261,7 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	Caution must be executed with respect to signs when conjugating fermions.
 	It is advisable that the reader should take a moment to understand why the signs in front of 
 	the conjugated terms are as they are shown in Eq.~\eqref{L-dirac-expanded}.
+
 	Let us begin with the kinetic terms first.
 	Because of Lorentz transformations (and of gauge transformations, if applicable), 
 	$ \psi_L $ and $ \psi_R $ are traditionally written on the right,
@@ -2269,9 +2281,9 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 \label{left-dirac}
 	i\md\,\psi_L  ~~-~~  m\,\psi_R\,\jj	~~=~~	0\,.
 \end{equation}
-
 	Analogously, the derivative with respect to $ \psi_R^\dag $ of right-handed kinetic terms
 	is $ i\,\wt\md\,\psi_R $.
+
 	As for the mass term, one can proceed with it in two ways.
 	First, perhaps the easiest, is to re-write it in the form identical to that of the
 	left-handed mass term.
@@ -2315,7 +2327,10 @@ $^b${\it Department of Applied Mathematics and Theoretical Physics,\\
 	(and, correspondingly, the analogous right-handed derivative
 	did not contribute to Eq.~\eqref{right-dirac}).
 
-
+	The second way of differentiating the mass term with respect to $ \psi_R^\dag $
+	is to use Eq.~\eqref{spinor-der-dag} directly.
+	This would involve applying derivative $ \p^* $	with the help of identities \eqref{daq}.
+	The result will of course be the same.
 
 
 \small
