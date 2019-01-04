@@ -469,7 +469,7 @@
 \label{pseudo-vector}
 	v	~~=~~	i\,v^0  ~+~  \vec v
 \end{equation}
-	describes a \emph{pseudo}-scalar and a \emph{pseudo}-vector, with respect to inversion.
+	describes a \emph{pseudo}-scalar and a \emph{pseudo}-vector, with respect to parity inversion $ P $.
 	Together, the two objects \eqref{true-vector} and \eqref{pseudo-vector} span the entire space of 
 	complex quaternions \eqref{cq}.
 	In other words, a generic complex quaternion $ a $ can be split into two four-vectors.
@@ -484,7 +484,7 @@
 \begin{equation}
 	v^*	~~=~~	v^0  ~-~  i\,\vec v\,.
 \end{equation}
-	This actually is equivalent to quaternionic conjugation $ v^*  ~=~ v^\dag $.
+	This actually is equivalent to quaternionic conjugation $ v^*  ~=~ \wt v $.
 
 	The derivative operator $ \partial $
 \begin{equation}
@@ -517,7 +517,9 @@
 \end{equation}
 	where each individual exponent on the right-hand side {\emph is} treated as a rotation and a boost,
 	correspondingly.
-	Notice that since $ \Lambda $ is purely imaginary, $ \wt\Lambda ~=~ -\Lambda $, and therefore
+	Notice that since $ \Lambda $ is purely imaginary
+	(\emph{i.e.} its real part vanishes),
+	then $ \wt\Lambda ~=~ -\Lambda $, and therefore
 \begin{equation}
 	\wt{(e^\Lambda)}		~~=~~	e^{-\Lambda}\,.
 \end{equation}
@@ -555,7 +557,10 @@
 
 	Both $ \phi $ and $ \vec F $ transform the same way under Lorentz transformations:
 \begin{equation}
-	p	~~\to~~	e^\Lambda\,p\,e^{\wt\Lambda}\,.
+	\qquad\qquad\qquad\qquad
+	\rho	~~\to~~	e^\Lambda\,\rho\,e^{\wt\Lambda}\,,
+	\qquad\qquad\qquad
+	\rho	~=~	\phi\,,~ \vec F\,.
 \end{equation}
 	For the scalar $ \phi $ this obviously does not do anything, since $ \phi $ is just a complex number:
 \[
